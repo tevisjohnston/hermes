@@ -1,0 +1,80 @@
+{
+  "docker-vps-service-bridging": {
+    "archived_at": null,
+    "created_at": "2026-06-18T05:27:38.535436+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "hermes-agent-skill-authoring": {
+    "archived_at": null,
+    "created_at": "2026-06-18T04:01:24.044560+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-18T04:01:24.052324+00:00",
+    "last_viewed_at": "2026-06-18T04:01:24.044595+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "kanban-orchestrator": {
+    "archived_at": null,
+    "created_at": "2026-06-18T04:36:58.342764+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-18T04:36:58.345700+00:00",
+    "last_viewed_at": "2026-06-18T04:36:58.342789+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "kanban-worker": {
+    "archived_at": null,
+    "created_at": "2026-06-18T17:15:08.659689+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-18T17:19:07.072100+00:00",
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 0
+  },
+  "plan": {
+    "archived_at": null,
+    "created_at": "2026-06-18T03:41:38.404601+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-18T03:41:38.407250+00:00",
+    "last_viewed_at": "2026-06-18T03:41:38.404625+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "wordpress-development": {
+    "archived_at": null,
+    "created_at": "2026-06-18T03:41:49.374814+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-18T04:10:37.146462+00:00",
+    "last_used_at": "2026-06-18T05:27:17.288940+00:00",
+    "last_viewed_at": "2026-06-18T05:27:17.281425+00:00",
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
+  }
+}

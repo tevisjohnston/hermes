@@ -1,7 +1,7 @@
 ---
 name: docker-vps-service-bridging
 description: "How to securely expose host-bound services (TUI dashboards, local nodes, custom dev APIs) through an in-Docker Nginx reverse proxy with automated Let's Encrypt SSL."
-version: 1.0.0
+version: 1.1.0
 author: Hermes Agent
 license: MIT
 platforms: [linux]
@@ -29,27 +29,56 @@ Instead of building a heavy custom Docker image of your host process or breaking
 
 This container receives external traffic from the proxy, bridges the Docker network barrier, and routes it directly to the host's local port.
 
-### Step 1: Set Up host-gateway in Docker
-To allow containers to securely talk back to host-bound loopback ports, use the `host-gateway` mapping.
+> ⚠️ **Do NOT use `host.docker.internal:host-gateway` to reach the host.** That alias
+> resolves to the **docker0** gateway (`172.17.0.1`). Your socat container lives on the
+> `webproxy` network (a *different* bridge, e.g. `172.18.0.0/16`). Reaching `172.17.0.1`
+> from there requires bridge-to-bridge forwarding, which most hardened hosts drop
+> (`DEFAULT_FORWARD_POLICY="DROP"` in `/etc/default/ufw`). The connection **times out**
+> (not "refused"), the ACME HTTP-01 challenge fails, and you get a broken vhost.
+> Instead, dial the host's gateway IP **on the same network the container is attached to**,
+> and open the firewall for it (Steps 1–2 below).
 
-### Step 2: Create the Compose File
-In a dedicated directory for the subdomain (e.g., `/home/tevis/kanban.affiliatemarketconnect.com/`), create a `compose.yaml`:
+### Step 1: Find the host's gateway IP on the proxy network
+The host is reachable from a container at its gateway IP *on that container's network*.
+Discover it for the `webproxy` network:
+```bash
+docker network inspect affiliatemarketconnectcom_webproxy \
+  --format '{{range .IPAM.Config}}{{.Gateway}}{{end}}'
+# e.g. -> 172.18.0.1   (this is the host, as seen from the webproxy network)
+```
+Use this IP as the socat target (here: `172.18.0.1:9119`). It is stable unless the
+`webproxy` network is recreated with a different subnet.
+
+### Step 2: Open the firewall for Docker → host (REQUIRED)
+With `ufw` active and a default-deny INPUT policy, Docker containers cannot reach a
+host-bound port. Add a **scoped** rule covering all Docker bridge subnets — this opens the
+port to containers only, **never** to the public internet:
+```bash
+ufw allow from 172.16.0.0/12 to any port 9119 proto tcp comment 'Docker bridge -> host service'
+```
+Verify a container on the proxy network can now reach the host service:
+```bash
+docker run --rm --network affiliatemarketconnectcom_webproxy alpine \
+  sh -c 'apk add -q netcat-openbsd && nc -z -w3 172.18.0.1 9119 && echo OPEN || echo BLOCKED'
+```
+
+### Step 3: Create the Compose File
+In a dedicated directory for the subdomain (e.g., `/home/tevis/hermes.affiliatemarketconnect.com/`), create a `compose.yaml`:
 
 ```yaml
 services:
   host-bridge-proxy:
     image: alpine/socat
-    container_name: hermes-kanban-proxy
-    # Listen on port 80 inside container, forward to host-gateway on port 9119
-    command: tcp-listen:80,fork,reuseaddr tcp:host.docker.internal:9119
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    container_name: hermes-dashboard-proxy
+    # Listen on :80 in the container, forward to the host's gateway IP on the
+    # webproxy network (from Step 1) — NOT host.docker.internal. See warning above.
+    command: tcp-listen:80,fork,reuseaddr tcp:172.18.0.1:9119
     environment:
       # Ingress environment variables for nginx-proxy
-      VIRTUAL_HOST: kanban.affiliatemarketconnect.com
+      VIRTUAL_HOST: hermes.affiliatemarketconnect.com
       VIRTUAL_PORT: "80"
       # Ingress environment variables for ACME letsencrypt companion
-      LETSENCRYPT_HOST: kanban.affiliatemarketconnect.com
+      LETSENCRYPT_HOST: hermes.affiliatemarketconnect.com
       LETSENCRYPT_EMAIL: tevis.johnston@affiliatemarketconnect.com
     networks:
       - webproxy
@@ -61,10 +90,31 @@ networks:
     name: affiliatemarketconnectcom_webproxy
 ```
 
-Launch the proxy:
+### Step 4: Launch & Verify
 ```bash
 docker compose up -d
+# Cert issues in seconds once DNS + firewall + target IP are correct:
+curl -s -o /dev/null -w "HTTPS -> %{http_code}\n" https://hermes.affiliatemarketconnect.com/
+# Expect: HTTPS -> 200
 ```
+
+---
+
+## Secure Zero-Exposure Alternative: SSH Tunneling
+If you do not want to expose high-privilege dashboards or services to the public internet (even with reverse-proxy authentication), you can bind the host service strictly to localhost (`127.0.0.1`) and access it securely using an SSH tunnel.
+
+### Step 1: Start the Service on Localhost
+Start the dashboard or service bound to `127.0.0.1` (which is the default behavior):
+```bash
+hermes dashboard --host 127.0.0.1 --port 9119 --no-open
+```
+
+### Step 2: Establish the SSH Tunnel
+On your **local machine**, run the following command to map local port `9119` to the remote VPS's port `9119`:
+```bash
+ssh -L 9119:127.0.0.1:9119 user@your_vps_ip
+```
+Now, you can securely access the service in your local browser at `http://127.0.0.1:9119/kanban`.
 
 ---
 
@@ -108,11 +158,123 @@ systemctl status <service-name> --no-pager
 
 ---
 
+## Securing Exposed Services with Basic Auth under nginx-proxy
+
+When exposing host-bound services through an in-Docker `nginxproxy/nginx-proxy` setup, you often want to add a Basic Auth gate (username and password protection) to secure sensitive UIs like the Hermes Dashboard.
+
+Because Nginx runs inside a container, you cannot easily edit the host's general Nginx configurations or access `/etc/nginx/` directly. Instead, leverage `nginx-proxy`'s built-in support for per-vhost custom configurations mounted in `/etc/nginx/vhost.d/` (usually bound to `./vhost.d` in your `compose.yaml`).
+
+This allows you to secure specific subdomains with **zero downtime** and **zero impact** on your surrounding WordPress, database, or API services.
+
+### Step 1: Generate the Encrypted Password
+On the VPS host, generate an Apache-compatible MD5 password hash (using the `-apr1` format) via OpenSSL:
+```bash
+openssl passwd -apr1 yourpassword
+# Returns e.g.: $apr1$b7e/T1pi$v5y6x99WUkloYWC4Br3dw/
+```
+
+### Step 2: Create the `.htpasswd` file inside the `vhost.d` volume
+Write the credentials (`username:hash`) to a password file located inside your mounted `vhost.d` folder (e.g., `/home/tevis/affiliatemarketconnect.com/vhost.d/`):
+```bash
+echo "admin:\$apr1\$b7e/T1pi\$v5y6x99WUkloYWC4Br3dw/" > /home/tevis/affiliatemarketconnect.com/vhost.d/hermes.htpasswd
+```
+*(Make sure to escape any `$` signs in the shell, or write the file using a single-quoted heredoc).*
+
+> ⚠️ **CRITICAL PERMISSION PITFALL (500 Internal Server Error):** Files created as root on the host default to `600` permissions. While Nginx starts without errors, individual HTTP requests are handled by unprivileged Nginx *worker* processes (usually `nginx` or `www-data`). If the worker cannot read the `.htpasswd` file, it will fail with `Permission denied (13)` in the logs and return a **500 Internal Server Error** to the browser.
+> **Fix:** Explicitly make the password file world-readable:
+> ```bash
+> chmod 644 /path/to/vhost.d/hermes.htpasswd
+> ```
+
+### Step 3: Create the Custom Per-Vhost Nginx Configuration
+Create a file named exactly after your virtual host subdomain under your host's `vhost.d` directory. For example, `vhost.d/hermes.affiliatemarketconnect.com`:
+```nginx
+auth_basic "Hermes dashboard";
+auth_basic_user_file /etc/nginx/vhost.d/hermes.htpasswd;
+```
+*Note that the path referenced in `auth_basic_user_file` must be the absolute path **inside the Nginx container** (e.g., `/etc/nginx/vhost.d/...`), which is where your host `./vhost.d` directory is mounted.*
+
+### Step 4: Gracefully Reload Nginx inside Docker (Zero Downtime)
+Trigger a graceful configuration reload of the Nginx process inside the container. This reloads the rules in memory immediately without interrupting active connections to your other running websites:
+```bash
+docker exec nginx-proxy nginx -s reload
+```
+
+---
+
+## Version Controlling `.hermes` with Git & Symlink Realignment
+If you want to version-control your configurations, credentials (`.env`), skills, and database configurations on Git, you can move the `~/.hermes/` directory into a workspace repository (e.g., `~/hermes/.hermes/`) and initialize it with Git. 
+
+### Step 1: Stop Services and Move Directory
+Before moving, stop all active gateway and dashboard services to release file locks:
+```bash
+hermes gateway stop
+hermes dashboard --stop
+```
+Move the directory into your project repo:
+```bash
+mv ~/.hermes/ ~/hermes/.hermes
+```
+
+### Step 2: Establish the Directory Symlink
+Because Hermes commands default to looking under `~/.hermes`, any direct execution will recreate a blank configuration folder. Link your repo folder back to `~/.hermes`:
+```bash
+# Delete or back up any auto-recreated folder
+rm -rf ~/.hermes
+# Create the symlink
+ln -s ~/hermes/.hermes ~/.hermes
+```
+
+### Step 3: Configure Gitignore for Security
+Ensure secrets and large caches are not pushed to public repositories. Create `~/hermes/.gitignore`:
+```gitignore
+.env
+auth.json
+cache/
+logs/
+image_cache/
+audio_cache/
+state.db-shm
+state.db-wal
+kanban.db-shm
+kanban.db-wal
+```
+
+### Step 4: Restart Services
+```bash
+hermes gateway start
+hermes dashboard --no-open
+```
+
+---
+
 ## Critical Pitfalls & Troubleshooting
 
+### The #1 Failure: socat connection timeout (wrong target IP + firewall)
+This is the single most common cause of a silently broken bridge. Symptoms: `docker logs
+hermes-dashboard-proxy` shows `connect(... ) Operation timed out` / `tcp:...:9119:
+Operation timed out`, the vhost returns a 502/no-response, and the ACME challenge fails.
+Two independent root causes, both must be fixed:
+
+1. **Wrong target IP.** `host.docker.internal` → docker0 gateway (`172.17.0.1`), which is
+   *not on the webproxy network* and is unreachable across bridges when
+   `DEFAULT_FORWARD_POLICY="DROP"`. **Fix:** dial the webproxy gateway IP (Step 1).
+2. **Firewall blocks Docker → host.** `ufw` default-deny INPUT drops container→host traffic
+   on the service port. **Fix:** the scoped `ufw allow` rule (Step 2).
+
+> **Timeout vs. Refused:** a *timeout* means packets are being dropped (forward policy /
+> firewall / wrong IP). *Connection Refused* means you reached the host but nothing is
+> listening — that one really is fixed by binding the service to `0.0.0.0` (below).
+
 ### Port Binding Scope
-* **Pitfall:** If you start the host service bound strictly to localhost loopback (`127.0.0.1:9119`), containers routing via `host-gateway` (which resolves to the bridge gateway IP, e.g., `172.17.0.1`) will get a **Connection Refused** error.
-* **Solution:** Bind your host service to `0.0.0.0` so it accepts connections from any interface, including the Docker bridge gateway interface. Secure the port using standard firewall rules (like `ufw`) to block external internet access directly to port 9119, relying purely on Nginx-Proxy (port 80/443) for ingress.
+* **Pitfall:** If the host service binds strictly to localhost (`127.0.0.1:9119`), the
+  Docker bridge interface is a different interface and the container gets **Connection
+  Refused**.
+* **Solution:** Bind the host service to `0.0.0.0` so it accepts connections on the Docker
+  bridge interface too. This is safe *only when* the public internet is still blocked —
+  the scoped `ufw` rule in Step 2 opens the port to `172.16.0.0/12` (Docker) only, while
+  `ufw`'s default-deny keeps it closed to the internet. Ingress stays purely via
+  Nginx-Proxy on 80/443.
 
 ### Debouncing and ACME Challenge Failures
 * **Pitfall:** LetsEncrypt ACME companion uses HTTP-01 challenges, which means Let's Encrypt must reach `http://kanban.yourdomain.com/.well-known/acme-challenge/`. If the `socat` proxy starts *before* the host process is fully active, or if the port is wrong, the challenge may fail.

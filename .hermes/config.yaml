@@ -663,6 +663,9 @@ known_plugin_toolsets:
   - spotify
   discord:
   - spotify
+platforms:
+  discord:
+    enabled: true
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

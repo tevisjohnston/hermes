@@ -1,0 +1,52 @@
+# === Hermes runtime data — keep config/source, ignore secrets & regenerable state ===
+
+# Secrets & credentials
+.hermes/.env
+**/.env
+.hermes/auth.json
+.hermes/channel_directory.json
+.hermes/gateway_state.json
+.hermes/processes.json
+# Auth/token files anywhere in the tree (e.g. shared/nous_auth.json)
+**/*auth*.json
+**/*auth*.lock
+**/*token*.json
+
+# Locks, PIDs, runtime handles
+.hermes/*.lock
+.hermes/*.pid
+*.init.lock
+
+# Databases & WAL/SHM
+.hermes/*.db
+.hermes/*.db-shm
+.hermes/*.db-wal
+
+# Caches (regenerable)
+.hermes/*_cache.json
+.hermes/cache/
+.hermes/audio_cache/
+.hermes/image_cache/
+
+# Heavy downloaded dependencies / binaries
+.hermes/lsp/
+.hermes/bin/
+**/node_modules/
+
+# Logs
+.hermes/logs/
+.hermes/*.log
+
+# Ephemeral session / sandbox / state
+.hermes/sessions/
+.hermes/sandboxes/
+.hermes/pairing/
+.hermes/pastes/
+.hermes/state-snapshots/
+.hermes/cron/output/
+
+# Snapshots / history / backups
+.hermes/.update_check
+.hermes/.skills_prompt_snapshot.json
+.hermes/.hermes_history
+.hermes/*.bak.*

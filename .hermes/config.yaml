@@ -7,7 +7,7 @@ fallback_providers: []
 credential_pool_strategies: {}
 toolsets:
 - hermes-cli
-max_concurrent_sessions: null
+max_concurrent_sessions: 3
 agent:
   max_turns: 150
   gateway_timeout: 1800
@@ -125,7 +125,7 @@ checkpoints:
   retention_days: 7
   delete_orphans: true
   min_interval_hours: 24
-context_file_max_chars: null
+context_file_max_chars: {}
 file_read_max_chars: 100000
 tool_output:
   max_bytes: 50000

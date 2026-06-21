@@ -666,10 +666,10 @@ known_plugin_toolsets:
 platforms:
   discord:
     enabled: true
-    extra:
-      allow_from: ["708809189987844127"]
-      allow_admin_from: ["1516238556241068133"]                    # admins → all slash commands
-      user_allowed_commands: [status, model, update] 
+          extra:
+        allow_from: ["111", "222", "333"]
+        allow_admin_from: ["111"]                    # admins → all slash commands
+        user_allowed_commands: [status, model] 
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

@@ -1,0 +1,30 @@
+2026-06-21 07:28:39,219 WARNING [20260621_072720_926025] agent.conversation_loop: API call failed (attempt 1/3) error_type=GeminiAPIError thread=Thread-3 (run_agent):137411112457920 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash summary=Gemini streaming request failed: Server disconnected without sending a response.
+2026-06-21 07:28:39,220 WARNING [20260621_072720_926025] agent.conversation_loop: Retrying API call in 2.249437768411503s (attempt 1/3) thread=Thread-3 (run_agent):137411112457920 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash error=Gemini streaming request failed: Server disconnected without sending a response.
+2026-06-21 07:30:34,325 WARNING [20260621_072720_926025] hermes.lint.lsp: lsp[pyright] spawn/initialize failed for /root/hermes/.hermes/kanban/workspaces/t_e2a6bb86: TimeoutError: 
+2026-06-21 07:30:59,626 WARNING [20260621_072720_926025] agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "This foreground command appears to start a long-lived server/watch process. Run it with background=true, verify readiness (health endpoint/log signal), then e
+2026-06-21 07:31:18,402 WARNING [20260621_072720_926025] tools.browser_tool: browser 'close' stderr: /root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/lib/cli/validate-engines.js:25
+    throw err
+    ^
+
+Error: ENOENT: no such file or directory, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:10:19)
+    at new Config (/root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:80:19)
+    at new 
+2026-06-21 07:31:18,403 WARNING [20260621_072720_926025] tools.browser_tool: browser 'close' failed (rc=7): /root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/lib/cli/validate-engines.js:25
+    throw err
+    ^
+
+Error: ENOENT: no such file or directory, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/root/.nvm/versions/node/v24.12.0
+2026-06-21 08:54:00,295 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (27.57s): {"output": "/home/tevis/7figure.affiliatemarketconnect.com/wp-content/themes/7_Figure_Affiliate", "exit_code": 1, "error": null, "exit_code_meaning": "Some directories were inaccessible (partial resul
+2026-06-21 08:54:16,263 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "curl -k -I -H \"Host: 7figure.affiliatemarketconnect.com\" https://localhost", "descrip
+2026-06-21 08:54:21,788 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool patch returned error (0.00s): {"error": "Refusing to write to sensitive system path: /etc/hosts\nUse the terminal tool with sudo if you need to modify system files."}
+2026-06-21 08:54:23,712 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.10s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "echo \"127.0.0.1 7figure.affiliatemarketconnect.com\" >> /etc/hosts", "description": "o
+2026-06-21 08:54:33,179 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.39s): {"output": "Error: Your PHP installation appears to be missing the MySQL extension which is required by WordPress.\nPlease check that the `mysqli` PHP extension is installed and enabled.\nIf you are u
+2026-06-21 08:55:10,869 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (1.28s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-06-21 08:55:33,492 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.16s): {"output": "node:internal/modules/cjs/loader:1424\n  throw err;\n  ^\n\nError: Cannot find module 'playwright'\nRequire stack:\n- /root/visual_qa.js\n    at Module._resolveFilename (node:internal/modu
+2026-06-21 08:55:36,532 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.87s): {"output": "Launching browser...\nnode:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.launch: Executable doesn't exist at /root/.hermes
+2026-06-21 08:56:09,933 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.86s): {"output": "Launching browser...\nnode:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.launch: Executable doesn't exist at /root/.cache/
+2026-06-21 08:57:37,237 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (61.23s): {"output": "Launching browser...\nCapturing home...\n  - Desktop done\n  - Mobile done\nCapturing about...\n  - Desktop done\n  - Mobile done\nCapturing contact...\n  - Desktop done\n  - Mobile done\n

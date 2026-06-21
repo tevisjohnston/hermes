@@ -1,6 +1,0 @@
-fastapi
-pyjwt
-bcrypt
-pytest
-httpx
-uvicorn

@@ -14,6 +14,8 @@ metadata:
 
 > The **core worker lifecycle** (including the `kanban_create` fan-out pattern and the "decompose, don't execute" rule) is auto-injected into every kanban process via the `KANBAN_GUIDANCE` system-prompt block. This skill is the deeper playbook when you're an orchestrator profile whose whole job is routing.
 
+For managing distinct projects, domains, or workspaces with isolated Kanban queues, see [references/multi-board-projects.md](references/multi-board-projects.md).
+
 ## Profiles are user-configured — not a fixed roster
 
 Hermes setups vary widely. Some users run a single profile that does everything; some run a small fleet (`docker-worker`, `cron-worker`); some run a curated specialist team they've named themselves. There is **no default specialist roster** — the orchestrator skill does not know what profiles exist on this machine.

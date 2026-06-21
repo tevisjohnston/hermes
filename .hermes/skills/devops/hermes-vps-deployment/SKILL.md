@@ -99,3 +99,60 @@ To prevent disrupting other websites running on the same Nginx proxy container:
   ```bash
   hermes gateway restart
   ```
+
+---
+
+## 4. Optimizing the LSP (Language Server Protocol) Layer
+
+The LSP layer powers post-write semantic diagnostics inside `write_file` and `patch`. This drastically improves coding accuracy on the VPS.
+
+### Installation and Dependencies
+
+You can install all compatible language servers (Python, TS, JS, Vue, Svelte, Bash, Dockerfile, YAML, PHP) to `~/.hermes/lsp` automatically:
+```bash
+hermes lsp install-all
+```
+
+*   **Bash Integration Pitfall:** The `bash-language-server` requires `shellcheck` installed on the host system to generate diagnostics. If missing, diagnostics for shell scripts will be empty.
+    *   **Fix:** Install it via your package manager:
+        ```bash
+        sudo apt install shellcheck
+        ```
+
+### Tuning your `config.yaml`
+Add or update the `lsp:` block in `~/.hermes/config.yaml` to configure behavior:
+```yaml
+lsp:
+  enabled: true             # Master toggle
+  wait_mode: document       # "document" (focused file) or "full" (workspace-wide)
+  wait_timeout: 5.0         # Max seconds to block waiting for diagnostics
+  install_strategy: auto    # "auto" (install npm/go/pip servers on use) or "manual"
+  servers:
+    pyright:
+      disabled: false       # Disable individual servers if needed
+```
+
+---
+
+## 5. Modern Python Environment Management (PEP 668, `uv`, and `pipx`)
+
+Modern Debian/Ubuntu systems on a VPS enforce **PEP 668 (externally-managed-environment)**, blocking global `pip install` commands outside virtual environments to prevent system packaging conflicts.
+
+### Best Practices for Python Developers on a VPS
+
+1.  **Use `uv` (Blazing Fast & Recommended):**
+    `uv` is a modern, Rust-based, drop-in replacement for `pip` and `virtualenv`. It completely bypasses PEP 668 errors on your system when operating inside virtual environments.
+    *   **Create virtualenv:** `uv venv`
+    *   **Install packages:** `uv pip install <package>`
+2.  **Use `pipx` for CLI Tools:**
+    If you want to install standalone Python tools globally (like `black`, `flake8`, etc.), install `pipx` which handles isolation automatically:
+    ```bash
+    sudo apt install pipx
+    pipx install <package>
+    ```
+3.  **Ensure Standard library virtualenv support:**
+    If standard `python3 -m venv` is preferred, make sure the `python3-venv` package is installed:
+    ```bash
+    sudo apt install python3-venv
+    ```
+

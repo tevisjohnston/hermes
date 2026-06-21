@@ -1,0 +1,42 @@
+[
+  {
+    "session_id": "proc_d2207d1de988",
+    "command": ".venv/bin/uvicorn main:app --host 127.0.0.1 --port 8000",
+    "pid": 353023,
+    "pid_scope": "host",
+    "cwd": "/root/.hermes/kanban/workspaces/t_e2a6bb86",
+    "started_at": 1782026907.4224868,
+    "task_id": "default",
+    "session_key": "20260621_072720_926025",
+    "watcher_platform": "",
+    "watcher_chat_id": "",
+    "watcher_user_id": "",
+    "watcher_user_name": "",
+    "watcher_thread_id": "",
+    "watcher_message_id": "",
+    "watcher_interval": 0,
+    "notify_on_complete": false,
+    "watch_patterns": [
+      "Application startup complete"
+    ]
+  },
+  {
+    "session_id": "proc_8bcf3b8f1143",
+    "command": "python3 -m http.server 3000 --bind 127.0.0.1",
+    "pid": 353461,
+    "pid_scope": "host",
+    "cwd": "/root/.hermes/kanban/workspaces/t_e2a6bb86",
+    "started_at": 1782026909.870926,
+    "task_id": "default",
+    "session_key": "20260621_072720_926025",
+    "watcher_platform": "",
+    "watcher_chat_id": "",
+    "watcher_user_id": "",
+    "watcher_user_name": "",
+    "watcher_thread_id": "",
+    "watcher_message_id": "",
+    "watcher_interval": 0,
+    "notify_on_complete": false,
+    "watch_patterns": []
+  }
+]

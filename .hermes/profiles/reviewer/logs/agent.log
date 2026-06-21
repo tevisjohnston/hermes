@@ -1,0 +1,651 @@
+2026-06-21 07:27:13,752 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-21 07:27:13,754 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-21 07:27:13,756 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-21 07:27:13,870 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-21 07:27:13,871 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-21 07:27:13,872 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-21 07:27:13,873 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-21 07:27:13,874 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-21 07:27:13,885 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-21 07:27:13,886 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-21 07:27:13,889 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-21 07:27:13,891 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-21 07:27:13,892 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-21 07:27:13,893 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-21 07:27:13,895 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-21 07:27:13,896 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-21 07:27:13,897 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-21 07:27:13,898 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-21 07:27:19,820 INFO hermes_cli.plugins: Plugin discovery complete: 49 found, 42 enabled
+2026-06-21 07:27:20,840 INFO tools.tirith_security: tirith not found — downloading latest release for x86_64-unknown-linux-gnu...
+2026-06-21 07:27:20,877 INFO run_agent: Loaded environment variables from /root/.hermes/profiles/reviewer/.env
+2026-06-21 07:27:22,227 INFO run_agent: Gemini native client created (agent_init, shared=True) thread=MainThread:137411335735104 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:22,899 INFO agent.auxiliary_client: Vision auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 07:27:22,952 INFO tools.tirith_security: cosign not on PATH — installing tirith with SHA-256 verification only (install cosign for full supply chain verification)
+2026-06-21 07:27:23,315 INFO tools.tirith_security: tirith installed to /root/.hermes/profiles/reviewer/bin/tirith (SHA-256 only)
+2026-06-21 07:27:24,423 INFO agent.auxiliary_client: Vision auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 07:27:25,153 INFO [20260621_072720_926025] agent.turn_context: conversation turn: session=20260621_072720_926025 model=gemini-3.5-flash provider=gemini platform=cli history=0 msg='work kanban task t_e2a6bb86'
+2026-06-21 07:27:26,001 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-4 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:28,679 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-4 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:28,679 INFO [20260621_072720_926025] agent.conversation_loop: API call #1: model=gemini-3.5-flash provider=gemini in=25500 out=27 total=25527 latency=2.7s
+2026-06-21 07:27:28,956 INFO [20260621_072720_926025] agent.tool_executor: tool kanban_show completed (0.01s, 1976 chars)
+2026-06-21 07:27:28,982 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-5 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:31,581 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-5 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:31,582 INFO [20260621_072720_926025] agent.conversation_loop: API call #2: model=gemini-3.5-flash provider=gemini in=26399 out=54 total=26453 latency=2.6s cache=24396/26399 (92%)
+2026-06-21 07:27:31,591 INFO [20260621_072720_926025] agent.tool_executor: tool kanban_show completed (0.00s, 8787 chars)
+2026-06-21 07:27:32,598 INFO [20260621_072720_926025] agent.tool_executor: tool kanban_show completed (0.00s, 8981 chars)
+2026-06-21 07:27:32,617 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-6 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:35,356 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6 (_call):137411130287808 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:35,357 INFO [20260621_072720_926025] agent.conversation_loop: API call #3: model=gemini-3.5-flash provider=gemini in=32112 out=48 total=32160 latency=2.8s cache=24415/32112 (76%)
+2026-06-21 07:27:35,361 INFO [20260621_072720_926025] tools.file_tools: Creating new local environment for task default...
+2026-06-21 07:27:35,414 INFO [20260621_072720_926025] tools.environments.base: Session snapshot created (session=547001acf05c, cwd=/root)
+2026-06-21 07:27:35,415 INFO [20260621_072720_926025] tools.file_tools: local environment ready for task default
+2026-06-21 07:27:35,646 INFO [20260621_072720_926025] agent.tool_executor: tool search_files completed (0.29s, 18 chars)
+2026-06-21 07:27:35,672 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:37,498 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:37,499 INFO [20260621_072720_926025] agent.conversation_loop: API call #4: model=gemini-3.5-flash provider=gemini in=32481 out=96 total=32577 latency=1.8s cache=24409/32481 (75%)
+2026-06-21 07:27:37,600 INFO agent.tool_executor: tool search_files completed (0.09s, 313 chars)
+2026-06-21 07:27:37,616 INFO agent.tool_executor: tool search_files completed (0.11s, 6358 chars)
+2026-06-21 07:27:37,644 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-18 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:39,788 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-18 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:39,788 INFO [20260621_072720_926025] agent.conversation_loop: API call #5: model=gemini-3.5-flash provider=gemini in=35552 out=51 total=35603 latency=2.2s cache=24412/35552 (69%)
+2026-06-21 07:27:39,853 INFO [20260621_072720_926025] agent.tool_executor: tool search_files completed (0.06s, 2040 chars)
+2026-06-21 07:27:39,877 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-21 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:42,589 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-21 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:42,590 INFO [20260621_072720_926025] agent.conversation_loop: API call #6: model=gemini-3.5-flash provider=gemini in=36426 out=49 total=36475 latency=2.7s cache=32546/36426 (89%)
+2026-06-21 07:27:42,667 INFO [20260621_072720_926025] agent.tool_executor: tool search_files completed (0.07s, 254 chars)
+2026-06-21 07:27:42,692 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-24 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:44,637 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-24 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:44,638 INFO [20260621_072720_926025] agent.conversation_loop: API call #7: model=gemini-3.5-flash provider=gemini in=36876 out=80 total=36956 latency=2.0s cache=32540/36876 (88%)
+2026-06-21 07:27:44,805 INFO agent.tool_executor: tool read_file completed (0.16s, 1782 chars)
+2026-06-21 07:27:44,827 INFO agent.tool_executor: tool read_file completed (0.18s, 1640 chars)
+2026-06-21 07:27:44,848 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-33 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:46,534 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-33 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:46,535 INFO [20260621_072720_926025] agent.conversation_loop: API call #8: model=gemini-3.5-flash provider=gemini in=38223 out=82 total=38305 latency=1.7s cache=32533/38223 (85%)
+2026-06-21 07:27:46,701 INFO agent.tool_executor: tool read_file completed (0.16s, 5023 chars)
+2026-06-21 07:27:46,710 INFO agent.tool_executor: tool read_file completed (0.17s, 3942 chars)
+2026-06-21 07:27:46,735 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-42 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:48,526 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-42 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:48,527 INFO [20260621_072720_926025] agent.conversation_loop: API call #9: model=gemini-3.5-flash provider=gemini in=41323 out=80 total=41403 latency=1.8s cache=32538/41323 (79%)
+2026-06-21 07:27:48,764 INFO agent.tool_executor: tool read_file completed (0.23s, 17215 chars)
+2026-06-21 07:27:48,791 INFO agent.tool_executor: tool read_file completed (0.26s, 16257 chars)
+2026-06-21 07:27:48,819 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-51 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:50,511 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-51 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:50,512 INFO [20260621_072720_926025] agent.conversation_loop: API call #10: model=gemini-3.5-flash provider=gemini in=52626 out=44 total=52670 latency=1.7s cache=40720/52626 (77%)
+2026-06-21 07:27:50,684 INFO [20260621_072720_926025] agent.tool_executor: tool read_file completed (0.17s, 6251 chars)
+2026-06-21 07:27:50,712 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-56 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:56,075 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-56 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:56,076 INFO [20260621_072720_926025] agent.conversation_loop: API call #11: model=gemini-3.5-flash provider=gemini in=54615 out=108 total=54723 latency=5.4s cache=48866/54615 (89%)
+2026-06-21 07:27:56,254 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.18s, 45 chars)
+2026-06-21 07:27:56,277 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-58 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:58,154 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-58 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:58,155 INFO [20260621_072720_926025] agent.conversation_loop: API call #12: model=gemini-3.5-flash provider=gemini in=55427 out=48 total=55475 latency=1.9s cache=48861/55427 (88%)
+2026-06-21 07:27:58,223 INFO [20260621_072720_926025] agent.tool_executor: tool search_files completed (0.06s, 994 chars)
+2026-06-21 07:27:58,250 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-61 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:59,955 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-61 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:27:59,956 INFO [20260621_072720_926025] agent.conversation_loop: API call #13: model=gemini-3.5-flash provider=gemini in=56040 out=40 total=56080 latency=1.7s cache=48856/56040 (87%)
+2026-06-21 07:28:00,136 INFO [20260621_072720_926025] agent.tool_executor: tool read_file completed (0.17s, 171 chars)
+2026-06-21 07:28:00,176 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-66 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:02,364 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-66 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:02,366 INFO [20260621_072720_926025] agent.conversation_loop: API call #14: model=gemini-3.5-flash provider=gemini in=56179 out=60 total=56239 latency=2.2s cache=48848/56179 (87%)
+2026-06-21 07:28:04,793 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (2.41s, 870 chars)
+2026-06-21 07:28:04,828 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-68 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:06,659 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-68 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:06,660 INFO [20260621_072720_926025] agent.conversation_loop: API call #15: model=gemini-3.5-flash provider=gemini in=56758 out=51 total=56809 latency=1.9s cache=48843/56758 (86%)
+2026-06-21 07:28:11,971 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (5.30s, 968 chars)
+2026-06-21 07:28:12,007 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-70 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:27,300 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-70 (_call):137411000792768 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:27,301 INFO [20260621_072720_926025] agent.conversation_loop: API call #16: model=gemini-3.5-flash provider=gemini in=57149 out=83 total=57232 latency=15.3s cache=48836/57149 (85%)
+2026-06-21 07:28:27,456 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.15s, 173 chars)
+2026-06-21 07:28:27,489 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-71 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:29,757 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-71 (_call):137411009185472 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:29,757 INFO [20260621_072720_926025] agent.conversation_loop: API call #17: model=gemini-3.5-flash provider=gemini in=59591 out=77 total=59668 latency=2.3s cache=56981/59591 (96%)
+2026-06-21 07:28:29,896 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.13s, 157 chars)
+2026-06-21 07:28:29,929 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-72 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:31,729 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-72 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:31,729 INFO [20260621_072720_926025] agent.conversation_loop: API call #18: model=gemini-3.5-flash provider=gemini in=59869 out=68 total=59937 latency=1.8s cache=56973/59869 (95%)
+2026-06-21 07:28:31,733 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 184 chars)
+2026-06-21 07:28:32,735 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 173 chars)
+2026-06-21 07:28:32,759 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-73 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:34,470 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-73 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:34,471 INFO [20260621_072720_926025] agent.conversation_loop: API call #19: model=gemini-3.5-flash provider=gemini in=60178 out=68 total=60246 latency=1.7s cache=56959/60178 (95%)
+2026-06-21 07:28:34,475 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 110 chars)
+2026-06-21 07:28:35,479 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 110 chars)
+2026-06-21 07:28:35,506 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-74 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:37,261 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-74 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:37,262 INFO [20260621_072720_926025] agent.conversation_loop: API call #20: model=gemini-3.5-flash provider=gemini in=60388 out=68 total=60456 latency=1.8s cache=56945/60388 (94%)
+2026-06-21 07:28:37,267 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 110 chars)
+2026-06-21 07:28:38,269 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 110 chars)
+2026-06-21 07:28:38,290 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-75 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:39,216 INFO agent.chat_completion_helpers: Streaming failed before delivery: Gemini streaming request failed: Server disconnected without sending a response.
+2026-06-21 07:28:39,217 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-75 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:39,219 WARNING [20260621_072720_926025] agent.conversation_loop: API call failed (attempt 1/3) error_type=GeminiAPIError thread=Thread-3 (run_agent):137411112457920 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash summary=Gemini streaming request failed: Server disconnected without sending a response.
+2026-06-21 07:28:39,220 WARNING [20260621_072720_926025] agent.conversation_loop: Retrying API call in 2.249437768411503s (attempt 1/3) thread=Thread-3 (run_agent):137411112457920 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash error=Gemini streaming request failed: Server disconnected without sending a response.
+2026-06-21 07:28:41,637 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-76 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:43,845 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-76 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:43,846 INFO [20260621_072720_926025] agent.conversation_loop: API call #21: model=gemini-3.5-flash provider=gemini in=60619 out=67 total=60686 latency=5.6s cache=56930/60619 (94%)
+2026-06-21 07:28:44,033 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.18s, 1842 chars)
+2026-06-21 07:28:45,202 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.16s, 17135 chars)
+2026-06-21 07:28:45,227 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-79 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:47,018 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-79 (_call):137410992400064 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:47,019 INFO [20260621_072720_926025] agent.conversation_loop: API call #22: model=gemini-3.5-flash provider=gemini in=66703 out=31 total=66734 latency=1.8s cache=56953/66703 (85%)
+2026-06-21 07:28:47,090 INFO [20260621_072720_926025] tools.browser_tool: Started inactivity cleanup thread (timeout: 120s)
+2026-06-21 07:28:47,093 INFO [20260621_072720_926025] tools.browser_tool: Created local browser session h_68f2f6a3f1 for task 20260621_072720_926025
+2026-06-21 07:28:54,572 INFO [20260621_072720_926025] agent.tool_executor: tool browser_navigate completed (7.54s, 806 chars)
+2026-06-21 07:28:54,599 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-80 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:56,710 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-80 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:56,710 INFO [20260621_072720_926025] agent.conversation_loop: API call #23: model=gemini-3.5-flash provider=gemini in=67168 out=18 total=67186 latency=2.1s cache=65083/67168 (97%)
+2026-06-21 07:28:57,133 INFO [20260621_072720_926025] agent.tool_executor: tool browser_click completed (0.42s, 35 chars)
+2026-06-21 07:28:57,163 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-81 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:58,319 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-81 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:28:58,320 INFO [20260621_072720_926025] agent.conversation_loop: API call #24: model=gemini-3.5-flash provider=gemini in=67394 out=10 total=67404 latency=1.2s cache=65075/67394 (97%)
+2026-06-21 07:28:58,741 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.42s, 652 chars)
+2026-06-21 07:28:58,764 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-82 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:00,888 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-82 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:00,889 INFO [20260621_072720_926025] agent.conversation_loop: API call #25: model=gemini-3.5-flash provider=gemini in=67699 out=25 total=67724 latency=2.1s cache=65067/67699 (96%)
+2026-06-21 07:29:01,361 INFO [20260621_072720_926025] agent.tool_executor: tool browser_type completed (0.47s, 57 chars)
+2026-06-21 07:29:01,407 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-83 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:02,892 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-83 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:02,893 INFO [20260621_072720_926025] agent.conversation_loop: API call #26: model=gemini-3.5-flash provider=gemini in=67978 out=27 total=68005 latency=1.5s cache=65060/67978 (96%)
+2026-06-21 07:29:03,323 INFO [20260621_072720_926025] agent.tool_executor: tool browser_type completed (0.42s, 56 chars)
+2026-06-21 07:29:03,356 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-84 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:04,768 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-84 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:04,769 INFO [20260621_072720_926025] agent.conversation_loop: API call #27: model=gemini-3.5-flash provider=gemini in=68133 out=27 total=68160 latency=1.4s cache=65051/68133 (95%)
+2026-06-21 07:29:05,669 INFO [20260621_072720_926025] agent.tool_executor: tool browser_type completed (0.89s, 56 chars)
+2026-06-21 07:29:05,735 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-85 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:07,089 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-85 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:07,091 INFO [20260621_072720_926025] agent.conversation_loop: API call #28: model=gemini-3.5-flash provider=gemini in=68288 out=18 total=68306 latency=1.4s cache=65043/68288 (95%)
+2026-06-21 07:29:07,616 INFO [20260621_072720_926025] agent.tool_executor: tool browser_click completed (0.52s, 35 chars)
+2026-06-21 07:29:07,714 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-86 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:09,110 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-86 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:09,111 INFO [20260621_072720_926025] agent.conversation_loop: API call #29: model=gemini-3.5-flash provider=gemini in=68424 out=10 total=68434 latency=1.5s cache=65035/68424 (95%)
+2026-06-21 07:29:09,643 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.52s, 552 chars)
+2026-06-21 07:29:09,664 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-87 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:11,642 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-87 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:11,642 INFO [20260621_072720_926025] agent.conversation_loop: API call #30: model=gemini-3.5-flash provider=gemini in=68721 out=27 total=68748 latency=2.0s cache=65027/68721 (95%)
+2026-06-21 07:29:12,167 INFO [20260621_072720_926025] agent.tool_executor: tool browser_type completed (0.52s, 56 chars)
+2026-06-21 07:29:12,192 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-88 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:13,559 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-88 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:13,561 INFO [20260621_072720_926025] agent.conversation_loop: API call #31: model=gemini-3.5-flash provider=gemini in=68980 out=18 total=68998 latency=1.4s cache=65020/68980 (94%)
+2026-06-21 07:29:14,035 INFO [20260621_072720_926025] agent.tool_executor: tool browser_click completed (0.47s, 35 chars)
+2026-06-21 07:29:14,055 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-89 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:15,359 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-89 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:15,359 INFO [20260621_072720_926025] agent.conversation_loop: API call #32: model=gemini-3.5-flash provider=gemini in=69116 out=10 total=69126 latency=1.3s cache=65012/69116 (94%)
+2026-06-21 07:29:15,783 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.42s, 562 chars)
+2026-06-21 07:29:15,802 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-90 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:17,055 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-90 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:17,055 INFO [20260621_072720_926025] agent.conversation_loop: API call #33: model=gemini-3.5-flash provider=gemini in=69408 out=10 total=69418 latency=1.3s cache=65004/69408 (94%)
+2026-06-21 07:29:17,948 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.89s, 336 chars)
+2026-06-21 07:29:17,970 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-91 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:20,086 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-91 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:20,087 INFO [20260621_072720_926025] agent.conversation_loop: API call #34: model=gemini-3.5-flash provider=gemini in=69633 out=34 total=69667 latency=2.1s cache=64997/69633 (93%)
+2026-06-21 07:29:20,092 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 110 chars)
+2026-06-21 07:29:20,122 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-92 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:22,030 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-92 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:22,031 INFO [20260621_072720_926025] agent.conversation_loop: API call #35: model=gemini-3.5-flash provider=gemini in=69813 out=66 total=69879 latency=1.9s cache=64989/69813 (93%)
+2026-06-21 07:29:22,536 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.50s, 508 chars)
+2026-06-21 07:29:22,566 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-94 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:25,034 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-94 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:25,035 INFO [20260621_072720_926025] agent.conversation_loop: API call #36: model=gemini-3.5-flash provider=gemini in=70148 out=21 total=70169 latency=2.5s cache=64982/70148 (93%)
+2026-06-21 07:29:25,562 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.52s, 60 chars)
+2026-06-21 07:29:25,587 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-95 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:29,410 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-95 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:29,411 INFO [20260621_072720_926025] agent.conversation_loop: API call #37: model=gemini-3.5-flash provider=gemini in=70515 out=24 total=70539 latency=3.8s cache=64976/70515 (92%)
+2026-06-21 07:29:29,886 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.47s, 62 chars)
+2026-06-21 07:29:29,914 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-96 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:31,405 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-96 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:31,406 INFO [20260621_072720_926025] agent.conversation_loop: API call #38: model=gemini-3.5-flash provider=gemini in=71153 out=24 total=71177 latency=1.5s cache=64972/71153 (91%)
+2026-06-21 07:29:31,828 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.42s, 61 chars)
+2026-06-21 07:29:31,850 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-97 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:34,138 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-97 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:34,138 INFO [20260621_072720_926025] agent.conversation_loop: API call #39: model=gemini-3.5-flash provider=gemini in=71304 out=67 total=71371 latency=2.3s cache=64964/71304 (91%)
+2026-06-21 07:29:34,609 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.47s, 63 chars)
+2026-06-21 07:29:34,693 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-98 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:36,213 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-98 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:36,214 INFO [20260621_072720_926025] agent.conversation_loop: API call #40: model=gemini-3.5-flash provider=gemini in=71613 out=10 total=71623 latency=1.6s cache=64958/71613 (91%)
+2026-06-21 07:29:37,375 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (1.15s, 336 chars)
+2026-06-21 07:29:37,408 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-99 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:38,855 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-99 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:38,860 INFO [20260621_072720_926025] agent.conversation_loop: API call #41: model=gemini-3.5-flash provider=gemini in=71864 out=29 total=71893 latency=1.5s cache=64951/71864 (90%)
+2026-06-21 07:29:39,405 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.53s, 56 chars)
+2026-06-21 07:29:39,427 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-100 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:41,244 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-100 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:41,245 INFO [20260621_072720_926025] agent.conversation_loop: API call #42: model=gemini-3.5-flash provider=gemini in=72037 out=29 total=72066 latency=1.8s cache=64943/72037 (90%)
+2026-06-21 07:29:41,827 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.58s, 57 chars)
+2026-06-21 07:29:41,904 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-101 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:43,647 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-101 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:43,648 INFO [20260621_072720_926025] agent.conversation_loop: API call #43: model=gemini-3.5-flash provider=gemini in=72244 out=10 total=72254 latency=1.8s cache=64936/72244 (90%)
+2026-06-21 07:29:44,175 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.52s, 403 chars)
+2026-06-21 07:29:44,211 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-102 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:46,176 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-102 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:46,177 INFO [20260621_072720_926025] agent.conversation_loop: API call #44: model=gemini-3.5-flash provider=gemini in=72551 out=18 total=72569 latency=2.0s cache=64930/72551 (89%)
+2026-06-21 07:29:46,707 INFO [20260621_072720_926025] agent.tool_executor: tool browser_click completed (0.52s, 35 chars)
+2026-06-21 07:29:46,808 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-103 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:48,246 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-103 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:48,248 INFO [20260621_072720_926025] agent.conversation_loop: API call #45: model=gemini-3.5-flash provider=gemini in=72797 out=10 total=72807 latency=1.5s cache=64923/72797 (89%)
+2026-06-21 07:29:48,827 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.58s, 403 chars)
+2026-06-21 07:29:48,855 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-104 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:50,535 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-104 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:50,535 INFO [20260621_072720_926025] agent.conversation_loop: API call #46: model=gemini-3.5-flash provider=gemini in=73088 out=14 total=73102 latency=1.7s cache=64916/73088 (89%)
+2026-06-21 07:29:51,011 INFO [20260621_072720_926025] agent.tool_executor: tool browser_snapshot completed (0.47s, 839 chars)
+2026-06-21 07:29:51,046 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-105 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:52,619 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-105 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:52,620 INFO [20260621_072720_926025] agent.conversation_loop: API call #47: model=gemini-3.5-flash provider=gemini in=73502 out=31 total=73533 latency=1.6s cache=73025/73502 (99%)
+2026-06-21 07:29:53,154 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.52s, 56 chars)
+2026-06-21 07:29:53,211 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-106 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:54,808 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-106 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:54,809 INFO [20260621_072720_926025] agent.conversation_loop: API call #48: model=gemini-3.5-flash provider=gemini in=73681 out=10 total=73691 latency=1.6s cache=73017/73681 (99%)
+2026-06-21 07:29:56,120 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (1.31s, 336 chars)
+2026-06-21 07:29:56,146 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-107 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:57,955 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-107 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:29:57,956 INFO [20260621_072720_926025] agent.conversation_loop: API call #49: model=gemini-3.5-flash provider=gemini in=73948 out=45 total=73993 latency=1.8s cache=73010/73948 (99%)
+2026-06-21 07:29:58,481 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (0.52s, 86 chars)
+2026-06-21 07:29:58,517 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-108 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:01,246 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-108 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:01,250 INFO [20260621_072720_926025] agent.conversation_loop: API call #50: model=gemini-3.5-flash provider=gemini in=74162 out=31 total=74193 latency=2.8s cache=73002/74162 (98%)
+2026-06-21 07:30:03,932 INFO [20260621_072720_926025] agent.tool_executor: tool browser_console completed (2.64s, 57 chars)
+2026-06-21 07:30:04,101 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-109 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:07,793 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-109 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:07,811 INFO [20260621_072720_926025] agent.conversation_loop: API call #51: model=gemini-3.5-flash provider=gemini in=74363 out=26 total=74389 latency=3.9s cache=72994/74363 (98%)
+2026-06-21 07:30:08,840 INFO [20260621_072720_926025] agent.tool_executor: tool browser_vision completed (1.02s, 66896 chars)
+2026-06-21 07:30:08,890 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-110 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:15,206 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-110 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:15,221 INFO [20260621_072720_926025] agent.conversation_loop: API call #52: model=gemini-3.5-flash provider=gemini in=74564 out=46 total=74610 latency=6.4s cache=72987/74564 (98%)
+2026-06-21 07:30:21,324 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (6.09s, 1050 chars)
+2026-06-21 07:30:21,369 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-112 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:26,236 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-112 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:26,238 INFO [20260621_072720_926025] agent.conversation_loop: API call #53: model=gemini-3.5-flash provider=gemini in=75627 out=156 total=75783 latency=4.9s cache=72987/75627 (97%)
+2026-06-21 07:30:26,326 INFO agent.lsp.install: [install] npm install --prefix /root/.hermes/profiles/reviewer/lsp pyright
+2026-06-21 07:30:34,325 WARNING [20260621_072720_926025] hermes.lint.lsp: lsp[pyright] spawn/initialize failed for /root/hermes/.hermes/kanban/workspaces/t_e2a6bb86: TimeoutError: 
+2026-06-21 07:30:35,047 INFO [20260621_072720_926025] agent.tool_executor: tool patch completed (8.80s, 702 chars)
+2026-06-21 07:30:35,229 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-120 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:36,922 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-120 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:36,923 INFO [20260621_072720_926025] agent.conversation_loop: API call #54: model=gemini-3.5-flash provider=gemini in=76751 out=46 total=76797 latency=1.8s cache=72989/76751 (95%)
+2026-06-21 07:30:42,417 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (5.48s, 1050 chars)
+2026-06-21 07:30:42,464 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-122 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:46,138 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-122 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:46,145 INFO [20260621_072720_926025] agent.conversation_loop: API call #55: model=gemini-3.5-flash provider=gemini in=77133 out=49 total=77182 latency=3.7s cache=72983/77133 (95%)
+2026-06-21 07:30:46,377 INFO [20260621_072720_926025] agent.tool_executor: tool read_file completed (0.22s, 611 chars)
+2026-06-21 07:30:46,422 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-127 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:48,903 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-127 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:48,904 INFO [20260621_072720_926025] agent.conversation_loop: API call #56: model=gemini-3.5-flash provider=gemini in=77809 out=206 total=78015 latency=2.5s cache=72980/77809 (94%)
+2026-06-21 07:30:49,182 INFO [20260621_072720_926025] agent.tool_executor: tool patch completed (0.27s, 1137 chars)
+2026-06-21 07:30:49,265 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-135 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:50,880 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-135 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:50,881 INFO [20260621_072720_926025] agent.conversation_loop: API call #57: model=gemini-3.5-flash provider=gemini in=78452 out=46 total=78498 latency=1.6s cache=72977/78452 (93%)
+2026-06-21 07:30:55,971 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (5.09s, 1050 chars)
+2026-06-21 07:30:56,012 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-137 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:57,565 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-137 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:57,566 INFO [20260621_072720_926025] agent.conversation_loop: API call #58: model=gemini-3.5-flash provider=gemini in=78829 out=14 total=78843 latency=1.6s cache=72971/78829 (93%)
+2026-06-21 07:30:57,570 INFO [20260621_072720_926025] agent.tool_executor: tool process completed (0.00s, 17 chars)
+2026-06-21 07:30:57,605 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-138 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:59,622 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-138 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:30:59,623 INFO [20260621_072720_926025] agent.conversation_loop: API call #59: model=gemini-3.5-flash provider=gemini in=78911 out=35 total=78946 latency=2.0s cache=72963/78911 (92%)
+2026-06-21 07:30:59,626 WARNING [20260621_072720_926025] agent.tool_executor: Tool terminal returned error (0.00s): {"output": "", "exit_code": -1, "error": "This foreground command appears to start a long-lived server/watch process. Run it with background=true, verify readiness (health endpoint/log signal), then e
+2026-06-21 07:30:59,657 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-139 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:02,177 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-139 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:02,178 INFO [20260621_072720_926025] agent.conversation_loop: API call #60: model=gemini-3.5-flash provider=gemini in=79113 out=41 total=79154 latency=2.5s cache=72956/79113 (92%)
+2026-06-21 07:31:02,370 INFO [20260621_072720_926025] agent.tool_executor: tool terminal completed (0.18s, 60 chars)
+2026-06-21 07:31:02,426 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-141 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:10,834 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-141 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:10,842 INFO [20260621_072720_926025] agent.conversation_loop: API call #61: model=gemini-3.5-flash provider=gemini in=79302 out=197 total=79499 latency=8.5s cache=72948/79302 (92%)
+2026-06-21 07:31:12,230 INFO [20260621_072720_926025] agent.tool_executor: tool kanban_complete completed (1.37s, 50 chars)
+2026-06-21 07:31:12,457 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-142 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:18,221 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-142 (_call):137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:18,222 INFO [20260621_072720_926025] agent.conversation_loop: API call #62: model=gemini-3.5-flash provider=gemini in=80434 out=600 total=81034 latency=5.9s cache=72950/80434 (91%)
+2026-06-21 07:31:18,402 WARNING [20260621_072720_926025] tools.browser_tool: browser 'close' stderr: /root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/lib/cli/validate-engines.js:25
+    throw err
+    ^
+
+Error: ENOENT: no such file or directory, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:10:19)
+    at new Config (/root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:80:19)
+    at new 
+2026-06-21 07:31:18,403 WARNING [20260621_072720_926025] tools.browser_tool: browser 'close' failed (rc=7): /root/.nvm/versions/node/v24.12.0/lib/node_modules/npm/lib/cli/validate-engines.js:25
+    throw err
+    ^
+
+Error: ENOENT: no such file or directory, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/root/.nvm/versions/node/v24.12.0
+2026-06-21 07:31:19,628 INFO [20260621_072720_926025] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=gemini-3.5-flash api_calls=62/150 budget=62/150 tool_turns=61 last_msg_role=assistant response_len=2647 session=20260621_072720_926025
+2026-06-21 07:31:19,716 INFO run_agent: Gemini native client created (agent_init, shared=True) thread=bg-review:137410690148032 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 07:31:19,850 INFO tools.terminal_tool: Manually cleaned up environment for task: default
+2026-06-21 07:31:19,853 INFO tools.terminal_tool: Cleaned 1 environments
+2026-06-21 07:31:19,855 INFO [20260621_072720_926025] agent.turn_context: conversation turn: session=20260621_072720_926025 model=gemini-3.5-flash provider=gemini platform=cli history=133 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-06-21 07:31:19,870 INFO cli: CLI cleanup calling memory shutdown for session 20260621_072720_926025 with 133 message(s)
+2026-06-21 07:31:19,897 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 07:31:19,897 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (gemini-3.5-flash) at https://generativelanguage.googleapis.com/v1beta
+2026-06-21 07:31:19,908 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-143 (_call):137410984007360 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:52:44,483 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-21 08:52:44,484 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-21 08:52:44,485 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-21 08:52:44,486 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-21 08:52:44,486 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-21 08:52:44,487 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-21 08:52:44,618 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-21 08:52:44,620 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-21 08:52:44,621 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-21 08:52:44,622 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-21 08:52:44,623 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-21 08:52:44,623 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-21 08:52:44,624 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-21 08:52:44,625 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-21 08:52:44,625 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-21 08:52:44,626 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-21 08:52:44,636 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-21 08:52:44,636 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-21 08:52:44,637 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-21 08:52:44,637 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-21 08:52:44,639 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-21 08:52:44,639 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-21 08:52:44,640 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-21 08:52:44,640 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-21 08:52:44,641 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-21 08:52:44,641 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-21 08:52:44,643 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-21 08:52:44,643 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-21 08:52:44,644 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-21 08:52:44,646 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-21 08:52:44,647 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-21 08:52:44,649 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-21 08:52:44,650 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-21 08:52:44,650 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-21 08:52:44,651 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-21 08:52:44,653 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-21 08:52:52,975 INFO hermes_cli.plugins: Plugin discovery complete: 49 found, 42 enabled
+2026-06-21 08:52:52,975 INFO hermes_cli.plugins: Plugin discovery complete: 49 found, 42 enabled
+2026-06-21 08:52:53,987 INFO hermes_cli.active_sessions: Active session limit reached: active=1 max=1 surface=cli
+2026-06-21 08:52:54,696 INFO run_agent: Loaded environment variables from /root/.hermes/profiles/reviewer/.env
+2026-06-21 08:52:55,903 INFO run_agent: Gemini native client created (agent_init, shared=True) thread=MainThread:123486250673984 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:52:56,507 INFO agent.auxiliary_client: Vision auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 08:52:57,052 INFO agent.auxiliary_client: Vision auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 08:52:57,723 INFO [20260621_085253_c943ed] agent.turn_context: conversation turn: session=20260621_085253_c943ed model=gemini-3.5-flash provider=gemini platform=cli history=0 msg='work kanban task t_5c213d4e'
+2026-06-21 08:52:58,367 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-3 (_call):123485933536960 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:00,314 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-3 (_call):123485933536960 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:00,315 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #1: model=gemini-3.5-flash provider=gemini in=25497 out=28 total=25525 latency=2.0s
+2026-06-21 08:53:00,566 INFO [20260621_085253_c943ed] agent.tool_executor: tool kanban_show completed (0.01s, 2319 chars)
+2026-06-21 08:53:00,596 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-4 (_call):123485933536960 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:03,290 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-4 (_call):123485933536960 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:03,291 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #2: model=gemini-3.5-flash provider=gemini in=26385 out=61 total=26446 latency=2.7s cache=24396/26385 (92%)
+2026-06-21 08:53:03,297 INFO [20260621_085253_c943ed] tools.file_tools: Creating new local environment for task default...
+2026-06-21 08:53:03,357 INFO [20260621_085253_c943ed] tools.environments.base: Session snapshot created (session=1c56c057387d, cwd=/root)
+2026-06-21 08:53:03,358 INFO [20260621_085253_c943ed] tools.file_tools: local environment ready for task default
+2026-06-21 08:53:03,506 INFO [20260621_085253_c943ed] agent.tool_executor: tool search_files completed (0.21s, 18 chars)
+2026-06-21 08:53:03,528 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-11 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:06,552 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-11 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:06,552 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #3: model=gemini-3.5-flash provider=gemini in=26694 out=26 total=26720 latency=3.0s cache=24389/26694 (91%)
+2026-06-21 08:53:06,561 INFO [20260621_085253_c943ed] agent.tool_executor: tool kanban_show completed (0.00s, 3177 chars)
+2026-06-21 08:53:06,582 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-12 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:08,261 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-12 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:08,262 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #4: model=gemini-3.5-flash provider=gemini in=27970 out=26 total=27996 latency=1.7s cache=24389/27970 (87%)
+2026-06-21 08:53:08,270 INFO [20260621_085253_c943ed] agent.tool_executor: tool kanban_show completed (0.00s, 2358 chars)
+2026-06-21 08:53:08,288 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-13 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:10,016 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:10,017 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #5: model=gemini-3.5-flash provider=gemini in=28816 out=28 total=28844 latency=1.7s cache=24386/28816 (85%)
+2026-06-21 08:53:10,023 INFO [20260621_085253_c943ed] agent.tool_executor: tool kanban_show completed (0.00s, 15458 chars)
+2026-06-21 08:53:10,040 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-14 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:12,821 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-14 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:12,822 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #6: model=gemini-3.5-flash provider=gemini in=33845 out=50 total=33895 latency=2.8s cache=24407/33845 (72%)
+2026-06-21 08:53:12,949 INFO [20260621_085253_c943ed] agent.tool_executor: tool search_files completed (0.12s, 18 chars)
+2026-06-21 08:53:12,971 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-18 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:15,391 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-18 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:15,392 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #7: model=gemini-3.5-flash provider=gemini in=34168 out=29 total=34197 latency=2.4s cache=32535/34168 (95%)
+2026-06-21 08:53:22,838 INFO [20260621_085253_c943ed] agent.tool_executor: tool search_files completed (7.44s, 3216 chars)
+2026-06-21 08:53:22,861 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-21 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:25,293 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-21 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:25,293 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #8: model=gemini-3.5-flash provider=gemini in=35580 out=39 total=35619 latency=2.4s cache=32535/35580 (91%)
+2026-06-21 08:53:25,443 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.14s, 301 chars)
+2026-06-21 08:53:25,465 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-23 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:27,362 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-23 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:27,363 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #9: model=gemini-3.5-flash provider=gemini in=35984 out=50 total=36034 latency=1.9s cache=32529/35984 (90%)
+2026-06-21 08:53:27,467 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.10s, 141 chars)
+2026-06-21 08:53:27,490 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-25 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:29,827 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-25 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:29,827 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #10: model=gemini-3.5-flash provider=gemini in=36234 out=24 total=36258 latency=2.4s cache=32522/36234 (90%)
+2026-06-21 08:53:29,935 INFO [20260621_085253_c943ed] agent.tool_executor: tool search_files completed (0.10s, 18 chars)
+2026-06-21 08:53:29,958 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-29 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:32,722 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-29 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:53:32,723 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #11: model=gemini-3.5-flash provider=gemini in=36460 out=34 total=36494 latency=2.8s cache=32514/36460 (89%)
+2026-06-21 08:53:44,312 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-06-21 08:53:44,313 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-06-21 08:53:44,315 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-06-21 08:53:44,481 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-06-21 08:53:44,484 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-06-21 08:53:44,484 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-06-21 08:53:44,485 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-06-21 08:53:44,486 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-06-21 08:53:44,497 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-06-21 08:53:44,498 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-06-21 08:53:44,500 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-06-21 08:53:44,501 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-06-21 08:53:44,502 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-06-21 08:53:44,504 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-06-21 08:53:44,504 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-06-21 08:53:44,505 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-06-21 08:53:44,506 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-06-21 08:53:44,508 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-06-21 08:53:49,904 INFO hermes_cli.plugins: Plugin discovery complete: 49 found, 42 enabled
+2026-06-21 08:53:50,420 INFO hermes_cli.active_sessions: Active session limit reached: active=1 max=1 surface=cli
+2026-06-21 08:54:00,295 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (27.57s): {"output": "/home/tevis/7figure.affiliatemarketconnect.com/wp-content/themes/7_Figure_Affiliate", "exit_code": 1, "error": null, "exit_code_meaning": "Some directories were inaccessible (partial resul
+2026-06-21 08:54:00,343 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-31 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:02,357 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-31 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:02,358 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #12: model=gemini-3.5-flash provider=gemini in=36739 out=33 total=36772 latency=2.0s cache=32507/36739 (88%)
+2026-06-21 08:54:02,542 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.18s, 2086 chars)
+2026-06-21 08:54:02,568 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-33 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:04,248 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-33 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:04,251 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #13: model=gemini-3.5-flash provider=gemini in=37926 out=15 total=37941 latency=1.7s cache=32507/37926 (86%)
+2026-06-21 08:54:04,667 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.41s, 2937 chars)
+2026-06-21 08:54:04,694 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-35 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:06,857 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-35 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:06,857 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #14: model=gemini-3.5-flash provider=gemini in=38927 out=36 total=38963 latency=2.2s cache=32505/38927 (84%)
+2026-06-21 08:54:07,027 INFO [20260621_085253_c943ed] agent.tool_executor: tool read_file completed (0.17s, 2132 chars)
+2026-06-21 08:54:07,051 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-40 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:09,084 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-40 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:09,086 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #15: model=gemini-3.5-flash provider=gemini in=39948 out=57 total=40005 latency=2.1s cache=32504/39948 (81%)
+2026-06-21 08:54:09,528 INFO [20260621_085253_c943ed] agent.tool_executor: tool search_files completed (0.43s, 5926 chars)
+2026-06-21 08:54:09,550 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-43 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:12,100 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-43 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:12,101 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #16: model=gemini-3.5-flash provider=gemini in=42250 out=18 total=42268 latency=2.6s cache=32510/42250 (77%)
+2026-06-21 08:54:12,289 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.12s, 676 chars)
+2026-06-21 08:54:12,310 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-45 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:14,315 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-45 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:14,316 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #17: model=gemini-3.5-flash provider=gemini in=42711 out=37 total=42748 latency=2.0s cache=40632/42711 (95%)
+2026-06-21 08:54:14,535 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.21s, 591 chars)
+2026-06-21 08:54:14,566 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-47 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:16,150 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-47 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:16,151 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #18: model=gemini-3.5-flash provider=gemini in=43079 out=39 total=43118 latency=1.6s cache=40626/43079 (94%)
+2026-06-21 08:54:16,263 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "curl -k -I -H \"Host: 7figure.affiliatemarketconnect.com\" https://localhost", "descrip
+2026-06-21 08:54:16,283 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-48 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:19,497 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-48 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:19,497 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #19: model=gemini-3.5-flash provider=gemini in=43281 out=28 total=43309 latency=3.2s cache=40618/43281 (94%)
+2026-06-21 08:54:19,667 INFO [20260621_085253_c943ed] agent.tool_executor: tool read_file completed (0.16s, 791 chars)
+2026-06-21 08:54:19,697 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-53 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:21,784 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-53 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:21,785 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #20: model=gemini-3.5-flash provider=gemini in=43947 out=165 total=44112 latency=2.1s cache=40614/43947 (92%)
+2026-06-21 08:54:21,788 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool patch returned error (0.00s): {"error": "Refusing to write to sensitive system path: /etc/hosts\nUse the terminal tool with sudo if you need to modify system files."}
+2026-06-21 08:54:21,804 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-54 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:23,604 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-54 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:23,605 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #21: model=gemini-3.5-flash provider=gemini in=44189 out=42 total=44231 latency=1.8s cache=40607/44189 (92%)
+2026-06-21 08:54:23,712 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.10s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "echo \"127.0.0.1 7figure.affiliatemarketconnect.com\" >> /etc/hosts", "description": "o
+2026-06-21 08:54:23,734 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-55 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:27,373 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-55 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:27,373 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #22: model=gemini-3.5-flash provider=gemini in=44381 out=29 total=44410 latency=3.7s cache=40599/44381 (91%)
+2026-06-21 08:54:27,683 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.31s, 940 chars)
+2026-06-21 08:54:27,708 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-57 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:32,786 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-57 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:32,787 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #23: model=gemini-3.5-flash provider=gemini in=45100 out=46 total=45146 latency=5.1s cache=40596/45100 (90%)
+2026-06-21 08:54:33,179 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.39s): {"output": "Error: Your PHP installation appears to be missing the MySQL extension which is required by WordPress.\nPlease check that the `mysqli` PHP extension is installed and enabled.\nIf you are u
+2026-06-21 08:54:33,199 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-59 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:35,627 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-59 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:35,628 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #24: model=gemini-3.5-flash provider=gemini in=45916 out=53 total=45969 latency=2.4s cache=40593/45916 (88%)
+2026-06-21 08:54:37,151 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (1.51s, 787 chars)
+2026-06-21 08:54:37,173 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-61 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:40,689 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-61 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:40,690 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #25: model=gemini-3.5-flash provider=gemini in=46505 out=53 total=46558 latency=3.5s cache=40589/46505 (87%)
+2026-06-21 08:54:41,602 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.91s, 714 chars)
+2026-06-21 08:54:41,623 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-63 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:43,418 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-63 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:43,419 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #26: model=gemini-3.5-flash provider=gemini in=47272 out=56 total=47328 latency=1.8s cache=40587/47272 (86%)
+2026-06-21 08:54:44,336 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.91s, 596 chars)
+2026-06-21 08:54:44,374 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-65 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:50,283 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-65 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:50,284 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #27: model=gemini-3.5-flash provider=gemini in=47711 out=28 total=47739 latency=5.9s cache=40582/47711 (85%)
+2026-06-21 08:54:50,433 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.14s, 95 chars)
+2026-06-21 08:54:50,462 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-67 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:52,836 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-67 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:52,837 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #28: model=gemini-3.5-flash provider=gemini in=48515 out=24 total=48539 latency=2.4s cache=40580/48515 (84%)
+2026-06-21 08:54:53,159 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.32s, 58 chars)
+2026-06-21 08:54:53,182 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-69 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:56,041 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-69 (_call):123485924095680 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:54:56,042 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #29: model=gemini-3.5-flash provider=gemini in=48645 out=28 total=48673 latency=2.9s cache=40572/48645 (83%)
+2026-06-21 08:54:56,092 INFO [20260621_085253_c943ed] tools.browser_tool: Started inactivity cleanup thread (timeout: 120s)
+2026-06-21 08:54:56,094 INFO [20260621_085253_c943ed] tools.browser_tool: Created local browser session h_dc0b7b44dd for task 20260621_085253_c943ed
+2026-06-21 08:54:58,249 INFO [20260621_085253_c943ed] agent.tool_executor: tool browser_navigate completed (2.20s, 2186 chars)
+2026-06-21 08:54:58,285 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-70 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:00,660 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-70 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:00,661 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #30: model=gemini-3.5-flash provider=gemini in=49626 out=60 total=49686 latency=2.4s cache=40572/49626 (82%)
+2026-06-21 08:55:01,131 INFO [20260621_085253_c943ed] agent.tool_executor: tool browser_vision completed (0.46s, 501214 chars)
+2026-06-21 08:55:01,217 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-71 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:06,634 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-71 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:06,635 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #31: model=gemini-3.5-flash provider=gemini in=49899 out=17 total=49916 latency=5.5s cache=48679/49899 (98%)
+2026-06-21 08:55:07,701 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (1.06s, 59 chars)
+2026-06-21 08:55:07,734 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-73 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:09,580 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-73 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:09,581 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #32: model=gemini-3.5-flash provider=gemini in=50563 out=18 total=50581 latency=1.9s cache=48676/50563 (96%)
+2026-06-21 08:55:10,869 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (1.28s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-06-21 08:55:10,906 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-75 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:12,623 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-75 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:12,624 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #33: model=gemini-3.5-flash provider=gemini in=50696 out=21 total=50717 latency=1.7s cache=48668/50696 (96%)
+2026-06-21 08:55:14,090 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (1.46s, 351 chars)
+2026-06-21 08:55:14,147 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-77 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:18,586 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-77 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:18,587 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #34: model=gemini-3.5-flash provider=gemini in=50944 out=60 total=51004 latency=4.5s cache=48661/50944 (96%)
+2026-06-21 08:55:19,903 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (1.31s, 608 chars)
+2026-06-21 08:55:19,941 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-79 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:31,083 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-79 (_call):123485915702976 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:31,084 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #35: model=gemini-3.5-flash provider=gemini in=51748 out=860 total=52608 latency=11.2s cache=48659/51748 (94%)
+2026-06-21 08:55:31,404 INFO [20260621_085253_c943ed] agent.tool_executor: tool write_file completed (0.31s, 166 chars)
+2026-06-21 08:55:31,563 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-89 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:33,326 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-89 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:33,327 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #36: model=gemini-3.5-flash provider=gemini in=54018 out=22 total=54040 latency=1.8s cache=48670/54018 (90%)
+2026-06-21 08:55:33,492 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.16s): {"output": "node:internal/modules/cjs/loader:1424\n  throw err;\n  ^\n\nError: Cannot find module 'playwright'\nRequire stack:\n- /root/visual_qa.js\n    at Module._resolveFilename (node:internal/modu
+2026-06-21 08:55:33,522 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-91 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:35,608 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-91 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:35,609 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #37: model=gemini-3.5-flash provider=gemini in=54441 out=49 total=54490 latency=2.1s cache=48665/54441 (89%)
+2026-06-21 08:55:36,532 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.87s): {"output": "Launching browser...\nnode:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.launch: Executable doesn't exist at /root/.hermes
+2026-06-21 08:55:36,562 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-93 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:38,836 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-93 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:55:38,837 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #38: model=gemini-3.5-flash provider=gemini in=54883 out=32 total=54915 latency=2.3s cache=48660/54883 (89%)
+2026-06-21 08:56:06,181 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (27.34s, 71 chars)
+2026-06-21 08:56:06,248 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-95 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:09,063 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-95 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:09,064 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #39: model=gemini-3.5-flash provider=gemini in=55076 out=67 total=55143 latency=2.8s cache=48653/55076 (88%)
+2026-06-21 08:56:09,933 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (0.86s): {"output": "Launching browser...\nnode:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nbrowserType.launch: Executable doesn't exist at /root/.cache/
+2026-06-21 08:56:09,972 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-97 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:11,896 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-97 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:11,897 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #40: model=gemini-3.5-flash provider=gemini in=55614 out=25 total=55639 latency=1.9s cache=48649/55614 (87%)
+2026-06-21 08:56:12,022 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.12s, 605 chars)
+2026-06-21 08:56:12,073 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-99 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:14,101 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-99 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:14,102 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #41: model=gemini-3.5-flash provider=gemini in=56045 out=36 total=56081 latency=2.1s cache=48645/56045 (87%)
+2026-06-21 08:56:33,822 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (19.71s, 3191 chars)
+2026-06-21 08:56:33,855 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-101 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:35,998 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-101 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:56:35,999 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #42: model=gemini-3.5-flash provider=gemini in=57835 out=67 total=57902 latency=2.2s cache=48652/57835 (84%)
+2026-06-21 08:57:26,171 INFO tools.browser_tool: Cleaning up inactive session for task: 20260621_085253_c943ed (inactive for 145s)
+2026-06-21 08:57:37,237 WARNING [20260621_085253_c943ed] agent.tool_executor: Tool terminal returned error (61.23s): {"output": "Launching browser...\nCapturing home...\n  - Desktop done\n  - Mobile done\nCapturing about...\n  - Desktop done\n  - Mobile done\nCapturing contact...\n  - Desktop done\n  - Mobile done\n
+2026-06-21 08:57:37,272 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-103 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:40,252 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-103 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:40,253 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #43: model=gemini-3.5-flash provider=gemini in=58182 out=20 total=58202 latency=3.0s
+2026-06-21 08:57:40,401 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.14s, 1070 chars)
+2026-06-21 08:57:40,433 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-105 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:45,731 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-105 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:45,732 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #44: model=gemini-3.5-flash provider=gemini in=58976 out=683 total=59659 latency=5.3s cache=56753/58976 (96%)
+2026-06-21 08:57:46,018 INFO [20260621_085253_c943ed] agent.tool_executor: tool write_file completed (0.28s, 166 chars)
+2026-06-21 08:57:46,111 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-112 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:47,769 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-112 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:57:47,770 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #45: model=gemini-3.5-flash provider=gemini in=59910 out=73 total=59983 latency=1.7s cache=56752/59910 (95%)
+2026-06-21 08:58:50,397 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (62.62s, 397 chars)
+2026-06-21 08:58:50,435 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-114 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:58:52,140 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-114 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:58:52,141 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #46: model=gemini-3.5-flash provider=gemini in=60118 out=20 total=60138 latency=1.7s cache=56745/60118 (94%)
+2026-06-21 08:58:52,554 INFO [20260621_085253_c943ed] agent.tool_executor: tool terminal completed (0.15s, 1779 chars)
+2026-06-21 08:58:52,590 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-116 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:58:56,428 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-116 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:58:56,429 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #47: model=gemini-3.5-flash provider=gemini in=61108 out=59 total=61167 latency=3.9s cache=56745/61108 (93%)
+2026-06-21 08:58:56,435 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:58:56,455 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (0.02s, 500851 chars)
+2026-06-21 08:58:56,489 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-117 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:00,327 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-117 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:00,328 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #48: model=gemini-3.5-flash provider=gemini in=61710 out=65 total=61775 latency=3.9s cache=56742/61710 (92%)
+2026-06-21 08:59:00,333 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:00,344 INFO [20260621_085253_c943ed] tools.vision_tools: Image file is 1.5 MB (estimated base64 2.0 MB, limit 4.0 MB, max_dimension=7900), auto-resizing...
+2026-06-21 08:59:01,599 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 585x4621 (attempt 1)
+2026-06-21 08:59:01,829 INFO [20260621_085253_c943ed] tools.vision_tools: Auto-resized image fits: 1.0 MB (quality=None, 585x4621)
+2026-06-21 08:59:01,841 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (1.51s, 1096696 chars)
+2026-06-21 08:59:01,877 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-118 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:05,361 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-118 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:05,361 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #49: model=gemini-3.5-flash provider=gemini in=62226 out=64 total=62290 latency=3.5s cache=56738/62226 (91%)
+2026-06-21 08:59:05,377 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:05,392 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (0.01s, 1546022 chars)
+2026-06-21 08:59:05,439 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-119 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:08,830 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-119 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:08,831 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #50: model=gemini-3.5-flash provider=gemini in=62610 out=70 total=62680 latency=3.4s cache=56733/62610 (91%)
+2026-06-21 08:59:08,836 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:08,849 INFO [20260621_085253_c943ed] tools.vision_tools: Image file is 2.5 MB (estimated base64 3.4 MB, limit 4.0 MB, max_dimension=7900), auto-resizing...
+2026-06-21 08:59:10,818 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 585x9280 (attempt 1)
+2026-06-21 08:59:11,314 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 292x4640 (attempt 2)
+2026-06-21 08:59:11,428 INFO [20260621_085253_c943ed] tools.vision_tools: Auto-resized image fits: 0.6 MB (quality=None, 292x4640)
+2026-06-21 08:59:11,451 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (2.61s, 647307 chars)
+2026-06-21 08:59:11,559 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-120 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:14,013 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-120 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:14,013 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #51: model=gemini-3.5-flash provider=gemini in=63055 out=70 total=63125 latency=2.5s cache=56728/63055 (90%)
+2026-06-21 08:59:14,020 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:14,036 INFO [20260621_085253_c943ed] tools.vision_tools: Image file is 3.4 MB (estimated base64 4.5 MB, limit 4.0 MB, max_dimension=7900), auto-resizing...
+2026-06-21 08:59:15,893 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 640x9779 (attempt 1)
+2026-06-21 08:59:16,381 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 320x4889 (attempt 2)
+2026-06-21 08:59:16,509 INFO [20260621_085253_c943ed] tools.vision_tools: Auto-resized image fits: 1.2 MB (quality=None, 320x4889)
+2026-06-21 08:59:16,512 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (2.49s, 1236873 chars)
+2026-06-21 08:59:16,558 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-121 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:19,879 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-121 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:19,880 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #52: model=gemini-3.5-flash provider=gemini in=63350 out=74 total=63424 latency=3.3s cache=56722/63350 (90%)
+2026-06-21 08:59:19,887 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:19,924 INFO [20260621_085253_c943ed] tools.vision_tools: Image file is 10.6 MB (estimated base64 14.2 MB, limit 4.0 MB, max_dimension=7900), auto-resizing...
+2026-06-21 08:59:26,854 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 585x40591 (attempt 1)
+2026-06-21 08:59:28,826 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 292x20295 (attempt 2)
+2026-06-21 08:59:29,416 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 146x10147 (attempt 3)
+2026-06-21 08:59:29,614 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 73x5073 (attempt 4)
+2026-06-21 08:59:29,677 INFO [20260621_085253_c943ed] tools.vision_tools: Auto-resized image fits: 0.6 MB (quality=None, 73x5073)
+2026-06-21 08:59:29,679 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (9.79s, 679834 chars)
+2026-06-21 08:59:29,734 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-122 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:32,451 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-122 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:32,452 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #53: model=gemini-3.5-flash provider=gemini in=63727 out=69 total=63796 latency=2.8s cache=56717/63727 (89%)
+2026-06-21 08:59:32,459 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:32,467 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (0.01s, 999773 chars)
+2026-06-21 08:59:32,553 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-123 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:35,396 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-123 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:35,397 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #54: model=gemini-3.5-flash provider=gemini in=64017 out=66 total=64083 latency=2.9s cache=56711/64017 (89%)
+2026-06-21 08:59:35,402 INFO [20260621_085253_c943ed] tools.vision_tools: vision_analyze: native fast path
+2026-06-21 08:59:35,408 INFO [20260621_085253_c943ed] tools.vision_tools: Image file is 2.5 MB (estimated base64 3.4 MB, limit 4.0 MB, max_dimension=7900), auto-resizing...
+2026-06-21 08:59:37,187 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 585x8005 (attempt 1)
+2026-06-21 08:59:37,592 INFO [20260621_085253_c943ed] tools.vision_tools: Resized to 292x4002 (attempt 2)
+2026-06-21 08:59:37,682 INFO [20260621_085253_c943ed] tools.vision_tools: Auto-resized image fits: 0.6 MB (quality=None, 292x4002)
+2026-06-21 08:59:37,687 INFO [20260621_085253_c943ed] agent.tool_executor: tool vision_analyze completed (2.29s, 613706 chars)
+2026-06-21 08:59:37,764 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-124 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:48,547 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-124 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:48,548 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #55: model=gemini-3.5-flash provider=gemini in=64338 out=574 total=64912 latency=10.8s cache=56705/64338 (88%)
+2026-06-21 08:59:48,561 INFO [20260621_085253_c943ed] agent.tool_executor: tool kanban_complete completed (0.01s, 50 chars)
+2026-06-21 08:59:48,620 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-125 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:53,391 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-125 (_call):123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:53,392 INFO [20260621_085253_c943ed] agent.conversation_loop: API call #56: model=gemini-3.5-flash provider=gemini in=66177 out=481 total=66658 latency=4.8s cache=56714/66177 (86%)
+2026-06-21 08:59:53,934 INFO [20260621_085253_c943ed] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=gemini-3.5-flash api_calls=56/150 budget=56/150 tool_turns=55 last_msg_role=assistant response_len=1779 session=20260621_085253_c943ed
+2026-06-21 08:59:54,021 INFO run_agent: Gemini native client created (agent_init, shared=True) thread=bg-review:123485898917568 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:54,151 INFO [20260621_085253_c943ed] agent.turn_context: conversation turn: session=20260621_085253_c943ed model=gemini-3.5-flash provider=gemini platform=cli history=112 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-06-21 08:59:54,195 INFO tools.terminal_tool: Manually cleaned up environment for task: default
+2026-06-21 08:59:54,197 INFO tools.terminal_tool: Cleaned 1 environments
+2026-06-21 08:59:54,202 INFO cli: CLI cleanup calling memory shutdown for session 20260621_085253_c943ed with 112 message(s)
+2026-06-21 08:59:54,257 INFO run_agent: Gemini native client created (chat_completion_stream_request, shared=False) thread=Thread-126 (_call):123485907310272 provider=gemini base_url=https://generativelanguage.googleapis.com/v1beta model=gemini-3.5-flash
+2026-06-21 08:59:54,267 INFO agent.auxiliary_client: Auxiliary auto-detect: using main provider gemini (gemini-3.5-flash)
+2026-06-21 08:59:54,267 INFO agent.auxiliary_client: Auxiliary title_generation: using auto (gemini-3.5-flash) at https://generativelanguage.googleapis.com/v1beta

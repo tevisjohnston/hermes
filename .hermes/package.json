@@ -8,5 +8,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.1",
+    "unicode-animations": "^1.0.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "unicode-animations@1.0.3": true
   }
 }

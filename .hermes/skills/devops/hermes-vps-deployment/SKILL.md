@@ -156,3 +156,34 @@ Modern Debian/Ubuntu systems on a VPS enforce **PEP 668 (externally-managed-envi
     sudo apt install python3-venv
     ```
 
+---
+
+## 6. Dashboard Security Hardening & Systemd Crash Loops (PEP 668/June 2026 Hardening)
+
+Recent security hardening in Hermes Agent (June 2026) disables unauthenticated public/non-loopback binds (`0.0.0.0`). Non-loopback binds now ALWAYS require an auth provider to prevent exposing the dashboard to the open internet without security.
+
+### The Dashboard Infinite Crash Loop Pitfall
+- **The Issue:** If you run the Web Dashboard inside systemd (e.g. `hermes-dashboard.service`) using `--host 0.0.0.0` (to allow a reverse proxy Docker container like `nginx-proxy` or `hermes-dashboard-proxy` to connect to it), but do **not** have any auth providers configured in `~/.hermes/config.yaml`, the dashboard service will fail with exit code `1` and restart infinitely.
+  The logs (`gui.log` or journalctl) will repeatedly display:
+  ```
+  Refusing to bind dashboard to 0.0.0.0 — the auth gate engages on non-loopback binds, but no auth providers are registered.
+  ```
+- **The Fix:** Register a basic authentication provider inside `~/.hermes/config.yaml`:
+  1. **Generate your password hash:**
+     Run this Python command inside the active Hermes virtual environment on your VPS:
+     ```bash
+     /usr/local/lib/hermes-agent/venv/bin/python -c "from plugins.dashboard_auth.basic import hash_password; print(hash_password('your-desired-password'))"
+     ```
+  2. **Configure basic auth:**
+     Open `~/.hermes/config.yaml` and configure the `dashboard.basic_auth` block:
+     ```yaml
+     dashboard:
+       basic_auth:
+         username: "admin"
+         password_hash: "pbkdf2:sha256:250000$..."  # Paste the generated hash here
+     ```
+  3. **Restart the dashboard service:**
+     ```bash
+     systemctl restart hermes-dashboard.service
+     ```
+

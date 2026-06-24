@@ -341,9 +341,9 @@ dashboard:
     client_id: ''
     portal_url: ''
   basic_auth:
-    username: ''
-    password_hash: ''
-    password: ''
+    username: 'tevis'
+    password_hash: 'scrypt$16384$8$1$yaE3N/B5ozsi6eVvqmlmsQ==$TCF1keaUBs8NsI8UoBhbJU6XeC/LMX2Uux+4GpFeEFs='
+    password: 'sk84life'
     secret: ''
     session_ttl_seconds: 0
   public_url: ''

@@ -6,8 +6,9 @@ providers: {}
 fallback_providers: []
 credential_pool_strategies: {}
 toolsets:
-- hermes-cli
+  - hermes-cli
 max_concurrent_sessions: 10
+max_live_sessions: 16
 agent:
   max_turns: 150
   gateway_timeout: 1800
@@ -20,6 +21,7 @@ agent:
   environment_probe: true
   environment_hint: ''
   coding_context: auto
+  verify_on_stop: auto
   gateway_timeout_warning: 900
   clarify_timeout: 600
   gateway_notify_interval: 180
@@ -35,14 +37,12 @@ agent:
     creative: You are a creative assistant. Think outside the box and offer innovative
       solutions.
     teacher: You are a patient teacher. Explain concepts clearly with examples.
-    kawaii: "You are a kawaii assistant! Use cute expressions like (\u25D5\u203F\u25D5\
-      ), \u2605, \u266A, and ~! Add sparkles and be super enthusiastic about everything!\
-      \ Every response should feel warm and adorable desu~! \u30FD(>\u2200<\u2606\
-      )\u30CE"
-    catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and\
-      \ cat-like expressions to your speech. Use kaomoji like (=^\uFF65\u03C9\uFF65\
-      ^=) and \u0E05^\u2022\uFECC\u2022^\u0E05. Be playful and curious like a cat,\
-      \ nya~!"
+    kawaii: You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, and
+      ~! Add sparkles and be super enthusiastic about everything! Every response should
+      feel warm and adorable desu~! ヽ(>∀<☆)ノ
+    catgirl: You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and
+      cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ.
+      Be playful and curious like a cat, nya~!
     pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to
       sail the digital seas! Speak like a proper buccaneer, use nautical terms, and
       remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
@@ -50,9 +50,9 @@ agent:
       I shall respond in the eloquent manner of William Shakespeare, with flowery
       prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder
       terminal breaks?
-    surfer: "Duuude! You're chatting with the chillest AI on the web, bro! Everything's\
-      \ gonna be totally rad. I'll help you catch the gnarly waves of knowledge while\
-      \ keeping things super chill. Cowabunga! \U0001F919"
+    surfer: Duuude! You're chatting with the chillest AI on the web, bro! Everything's
+      gonna be totally rad. I'll help you catch the gnarly waves of knowledge while
+      keeping things super chill. Cowabunga! 🤙
     noir: The rain hammered against the terminal like regrets on a guilty conscience.
       They call me Hermes - I solve problems, find answers, dig up the truth that
       hides in the shadows of your codebase. In this city of silicon and secrets,
@@ -64,15 +64,15 @@ agent:
       deeper meaning behind every query. Let us examine not just the 'how' but the
       'why' of your questions. Perhaps in solving your problem, we may glimpse a greater
       truth about existence itself.
-    hype: "YOOO LET'S GOOOO!!! \U0001F525\U0001F525\U0001F525 I am SO PUMPED to help\
-      \ you today! Every question is AMAZING and we're gonna CRUSH IT together! This\
-      \ is gonna be LEGENDARY! ARE YOU READY?! LET'S DO THIS! \U0001F4AA\U0001F624\
-      \U0001F680"
+    hype: YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every question
+      is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE
+      YOU READY?! LET'S DO THIS! 💪😤🚀
 terminal:
   backend: local
   modal_mode: auto
   cwd: .
   timeout: 180
+  daemon_term_grace_seconds: 2.0
   env_passthrough: []
   home_mode: auto
   shell_init_files: []
@@ -277,6 +277,27 @@ auxiliary:
     api_key: ''
     timeout: 60
     extra_body: {}
+  background_review:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 120
+    extra_body: {}
+  moa_reference:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 600
+    extra_body: {}
+  moa_aggregator:
+    provider: auto
+    model: ''
+    base_url: ''
+    api_key: ''
+    timeout: 600
+    extra_body: {}
 display:
   compact: false
   personality: ''
@@ -292,6 +313,7 @@ display:
   tui_agents_nudge: true
   bell_on_complete: false
   show_reasoning: false
+  reasoning_full: false
   memory_notifications: 'on'
   streaming: true
   timestamps: false
@@ -316,6 +338,7 @@ display:
   tool_progress_overrides: {}
   tool_preview_length: 0
   tool_progress_grouping: accumulate
+  reasoning_style: code
   ephemeral_system_ttl: 0
   platforms:
     telegram:
@@ -325,10 +348,16 @@ display:
   runtime_footer:
     enabled: false
     fields:
-    - model
-    - context_pct
-    - cwd
+      - model
+      - context_pct
+      - cwd
   copy_shortcut: auto
+  pet:
+    enabled: false
+    slug: ''
+    render_mode: auto
+    scale: 0.33
+    unicode_cols: 0
   tool_progress: all
   cleanup_progress: false
   long_running_notifications: true
@@ -341,11 +370,14 @@ dashboard:
     client_id: ''
     portal_url: ''
   basic_auth:
-    username: 'tevis'
-    password_hash: 'scrypt$16384$8$1$yaE3N/B5ozsi6eVvqmlmsQ==$TCF1keaUBs8NsI8UoBhbJU6XeC/LMX2Uux+4GpFeEFs='
-    password: 'sk84life'
+    username: tevis
+    password_hash: scrypt$16384$8$1$yaE3N/B5ozsi6eVvqmlmsQ==$TCF1keaUBs8NsI8UoBhbJU6XeC/LMX2Uux+4GpFeEFs=
+    password: sk84life
     secret: ''
     session_ttl_seconds: 0
+  drain_auth:
+    scope: drain
+    min_secret_chars: 43
   public_url: ''
 privacy:
   redact_pii: false
@@ -435,6 +467,23 @@ delegation:
 prefill_messages_file: ''
 goals:
   max_turns: 20
+moa:
+  default_preset: default
+  active_preset: ''
+  presets:
+    default:
+      reference_models:
+        - provider: openai-codex
+          model: gpt-5.5
+        - provider: openrouter
+          model: deepseek/deepseek-v4-pro
+      aggregator:
+        provider: openrouter
+        model: anthropic/claude-opus-4.8
+      reference_temperature: 0.6
+      aggregator_temperature: 0.4
+      max_tokens: 4096
+      enabled: true
 skills:
   external_dirs: []
   template_vars: true
@@ -484,11 +533,11 @@ discord:
     speech_gain: 1.0
     ack_enabled: true
     ack_phrases:
-    - Let me look into that.
-    - One moment.
-    - Checking on that now.
-    - Give me a sec.
-    - On it.
+      - Let me look into that.
+      - One moment.
+      - Checking on that now.
+      - Give me a sec.
+      - On it.
 whatsapp: {}
 telegram:
   reactions: false
@@ -496,6 +545,7 @@ telegram:
   allowed_chats: ''
   extra:
     rich_messages: true
+    rich_drafts: false
 mattermost:
   require_mention: true
   free_response_channels: ''
@@ -538,7 +588,9 @@ cron:
     expected_audience: ''
     nas_jwks_url: ''
   wrap_response: true
+  mirror_delivery: false
   max_parallel_jobs: null
+  output_retention: 50
 code_execution:
   mode: project
   timeout: 300
@@ -561,18 +613,23 @@ model_catalog:
 network:
   force_ipv4: false
 gateway:
+  scale_to_zero:
+    idle_timeout_minutes: 5
   message_timestamps:
     enabled: false
+  max_inbound_media_bytes: 134217728
   strict: false
   media_delivery_allow_dirs: []
   trust_recent_files: true
   trust_recent_files_seconds: 600
+  api_server:
+    max_concurrent_runs: 10
 streaming:
   enabled: false
   transport: auto
   edit_interval: 0.8
   buffer_threshold: 24
-  cursor: " \u2589"
+  cursor: ' ▉'
   fresh_final_after_seconds: 0.0
 sessions:
   auto_prune: false
@@ -611,6 +668,8 @@ secrets:
 paste_collapse_threshold: 5
 paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
+computer_use:
+  cua_telemetry: false
 _config_version: 30
 session_reset:
   mode: none
@@ -619,76 +678,76 @@ session_reset:
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-  - browser
-  - clarify
-  - code_execution
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - memory
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - vision
-  - web
+    - browser
+    - clarify
+    - code_execution
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - vision
+    - web
   telegram:
-  - hermes-telegram
+    - hermes-telegram
   discord:
-  - browser
-  - clarify
-  - code_execution
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - memory
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - tts
-  - vision
-  - web
+    - browser
+    - clarify
+    - code_execution
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
   whatsapp:
-  - hermes-whatsapp
+    - hermes-whatsapp
   slack:
-  - hermes-slack
+    - hermes-slack
   signal:
-  - hermes-signal
+    - hermes-signal
   homeassistant:
-  - hermes-homeassistant
+    - hermes-homeassistant
   qqbot:
-  - hermes-qqbot
+    - hermes-qqbot
   yuanbao:
-  - hermes-yuanbao
+    - hermes-yuanbao
   teams:
-  - hermes-teams
+    - hermes-teams
   google_chat:
-  - hermes-google_chat
+    - hermes-google_chat
 image_gen:
   use_gateway: true
   model: fal-ai/flux-2/klein/9b
 known_plugin_toolsets:
   cli:
-  - spotify
+    - spotify
   discord:
-  - spotify
+    - spotify
 platforms:
   discord:
     enabled: true
     extra:
       allow_from:
-      - '708809189987844127'
+        - '708809189987844127'
       allow_admin_from:
-      - '1516238556241068133'
+        - '1516238556241068133'
       user_allowed_commands:
-      - status
-      - model
-      - update
+        - status
+        - model
+        - update
   whatsapp:
-    enabled: true
+    enabled: false
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

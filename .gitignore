@@ -50,3 +50,6 @@
 .hermes/.skills_prompt_snapshot.json
 .hermes/.hermes_history
 .hermes/*.bak.*
+
+# /home
+**/home/

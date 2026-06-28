@@ -21,7 +21,7 @@ agent:
   environment_probe: true
   environment_hint: ''
   coding_context: auto
-  verify_on_stop: auto
+  verify_on_stop: false
   gateway_timeout_warning: 900
   clarify_timeout: 600
   gateway_notify_interval: 180
@@ -670,7 +670,7 @@ paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
 computer_use:
   cua_telemetry: false
-_config_version: 30
+_config_version: 31
 session_reset:
   mode: none
   idle_minutes: 1440

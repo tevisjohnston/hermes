@@ -30,12 +30,16 @@
       5386
     ],
     "autonomous-ai-agents/hermes-agent/SKILL.md": [
-      1781749154808528967,
-      46765
+      1782659312213005613,
+      51596
     ],
     "autonomous-ai-agents/opencode/SKILL.md": [
       1781749154809528945,
       7259
+    ],
+    "computer-use/SKILL.md": [
+      1782235942890191527,
+      11179
     ],
     "creative/architecture-diagram/SKILL.md": [
       1781749154810528923,
@@ -106,24 +110,24 @@
       5285
     ],
     "devops/docker-vps-service-bridging/SKILL.md": [
-      1781760458529810180,
-      5139
+      1781805222988789206,
+      10212
     ],
     "devops/kanban-orchestrator/SKILL.md": [
       1781749154859527847,
       15831
     ],
     "devops/kanban-worker/SKILL.md": [
-      1781749154860527826,
-      10979
+      1782008960041589025,
+      12770
     ],
     "dogfood/SKILL.md": [
       1781749154860527826,
       6270
     ],
     "email/himalaya/SKILL.md": [
-      1781749154861527804,
-      7164
+      1782018707216976535,
+      7272
     ],
     "github/codebase-inspection/SKILL.md": [
       1781749154862527782,
@@ -221,6 +225,10 @@
       1781749154882527342,
       5280
     ],
+    "productivity/petdex/SKILL.md": [
+      1782339927578637931,
+      3534
+    ],
     "productivity/powerpoint/SKILL.md": [
       1781749154883527321,
       9298
@@ -258,8 +266,8 @@
       15518
     ],
     "software-development/hermes-agent-skill-authoring/SKILL.md": [
-      1781749154913526662,
-      7609
+      1782078105373283342,
+      10651
     ],
     "software-development/node-inspect-debugger/SKILL.md": [
       1781749154914526640,
@@ -278,20 +286,20 @@
       8465
     ],
     "software-development/simplify-code/SKILL.md": [
-      1781749154915526618,
-      8505
+      1781934799734809768,
+      10926
     ],
     "software-development/spike/SKILL.md": [
       1781749154916526596,
       8730
     ],
     "software-development/systematic-debugging/SKILL.md": [
-      1781749154916526596,
-      10471
+      1782078105374283320,
+      14065
     ],
     "software-development/test-driven-development/SKILL.md": [
-      1781749154916526596,
-      9564
+      1782078105374283320,
+      10306
     ],
     "software-development/wordpress-development/SKILL.md": [
       1781755837142510033,
@@ -506,6 +514,23 @@
         "linux",
         "macos",
         "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "computer-use",
+      "category": "computer-use",
+      "frontmatter_name": "computer-use",
+      "description": "Drive the user's desktop in the background — clicking, ty...",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
       ],
       "conditions": {
         "fallback_for_toolsets": [],
@@ -1294,6 +1319,23 @@
       }
     },
     {
+      "skill_name": "petdex",
+      "category": "productivity",
+      "frontmatter_name": "petdex",
+      "description": "Install and select animated petdex mascots for Hermes.",
+      "platforms": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "powerpoint",
       "category": "productivity",
       "frontmatter_name": "powerpoint",
@@ -1447,7 +1489,7 @@
       "skill_name": "hermes-agent-skill-authoring",
       "category": "software-development",
       "frontmatter_name": "hermes-agent-skill-authoring",
-      "description": "Author in-repo SKILL.md: frontmatter, validator, structure.",
+      "description": "Author in-repo SKILL.md: frontmatter, validator, structur...",
       "platforms": [
         "linux",
         "macos",

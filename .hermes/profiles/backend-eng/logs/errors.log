@@ -31,3 +31,12 @@ Please retry in 48.191867041s.
 Please retry in 48.191867041s. | provider=gemini model=gemini-3.5-flash msgs=90 tokens=~45,623
 2026-06-18 17:19:32,476 WARNING [20260618_171906_0ba8cc] agent.tool_executor: Tool terminal returned error (0.08s): {"output": "/usr/bin/bash: line 3: .venv/bin/pip: No such file or directory", "exit_code": 127, "error": null}
 2026-06-18 17:19:36,158 WARNING [20260618_171906_0ba8cc] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": ".venv/bin/python -c \"import fastapi; print(fastapi.__version__)\"", "description": "sc
+2026-06-28 16:05:48,087 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-06-28 16:05:48,089 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-06-28 16:05:49,744 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-06-28 16:05:49,746 WARNING tools.registry: check_fn check_read_terminal_requirements returned False; dependent tools will be unavailable this turn
+2026-06-28 16:07:17,363 WARNING [20260628_160546_ca2bdf] agent.tool_executor: Tool terminal returned error (0.36s): {"output": "Error: Failed to get current SQL modes. Reason: env: 'mysql': No such file or directory", "exit_code": 127, "error": null}
+2026-06-28 16:07:18,737 WARNING [20260628_160546_ca2bdf] agent.tool_executor: Tool terminal returned error (0.37s): {"output": "Error: Failed to get current SQL modes. Reason: env: 'mysql': No such file or directory", "exit_code": 127, "error": null}
+2026-06-28 16:07:24,705 WARNING [20260628_160546_ca2bdf] agent.tool_executor: Tool read_file returned error (0.01s): {"error": "Access denied: /home/tevis/affiliatemarketconnect.com/.env is a secret-bearing environment file and cannot be read to prevent credential leakage. If you need to check the file structure, re
+2026-06-28 16:07:24,712 WARNING [20260628_160546_ca2bdf] agent.tool_executor: Tool read_file returned error (0.01s): {"error": "Access denied: /home/tevis/7figure.affiliatemarketconnect.com/.env is a secret-bearing environment file and cannot be read to prevent credential leakage. If you need to check the file struc
+2026-06-28 16:09:47,145 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn

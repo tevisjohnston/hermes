@@ -632,7 +632,7 @@ streaming:
   cursor: ' ▉'
   fresh_final_after_seconds: 0.0
 sessions:
-  auto_prune: false
+  auto_prune: true
   retention_days: 90
   vacuum_after_prune: true
   min_interval_hours: 24
@@ -746,8 +746,6 @@ platforms:
         - status
         - model
         - update
-  whatsapp:
-    enabled: false
 
 # ── Fallback Model ────────────────────────────────────────────────────
 # Automatic provider failover when primary is unavailable.

@@ -17,6 +17,7 @@
   },
   "allowScripts": {
     "esbuild@0.28.1": true,
-    "unicode-animations@1.0.3": true
+    "unicode-animations@1.0.3": true,
+    "agent-browser@0.31.1": true
   }
 }

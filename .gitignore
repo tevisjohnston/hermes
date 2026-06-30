@@ -3,10 +3,13 @@
 # Secrets & credentials
 .hermes/.env
 **/.env
+.venv/
+**/.venv/
 .hermes/auth.json
 .hermes/channel_directory.json
 .hermes/gateway_state.json
 .hermes/processes.json
+
 # Auth/token files anywhere in the tree (e.g. shared/nous_auth.json)
 **/*auth*.json
 **/*auth*.lock

@@ -187,3 +187,14 @@ Recent security hardening in Hermes Agent (June 2026) disables unauthenticated p
      systemctl restart hermes-dashboard.service
      ```
 
+### The Auto-SSO 500 Internal Server Error Pitfall (Password-Only Auth)
+- **The Issue:** When only a single password-only authentication provider (like `basic_auth`) was configured with no other OAuth providers, accessing the dashboard root (`/`) resulted in a `500 Internal Server Error`. Under the hood, the auto-SSO middleware would attempt to automatically redirect the unauthenticated user using the single session provider to `/auth/login?provider=basic`. Since password providers do not support OAuth-style redirects, the `start_login` method raised `NotImplementedError`, which went uncaught and crashed the server.
+- **The Fix:** 
+  1. **Bypass Auto-SSO for Passwords:** We updated the auto-SSO middleware (`_auto_sso_response` in `/usr/local/lib/hermes-agent/hermes_cli/dashboard_auth/middleware.py`) to bypass the auto-SSO redirect if the provider has `supports_password` set to `True` (meaning it requires username/password input on the login page). The request now cleanly falls back to rendering the `/login` page with the sign-in form.
+  2. **Defensive Error Handling:** We updated the route `/auth/login` (in `/usr/local/lib/hermes-agent/hermes_cli/dashboard_auth/routes.py`) to catch `NotImplementedError` and return a clean `400 Bad Request` (such as `{"detail": "Provider does not support redirect login: 'basic'"}`) instead of crashing with a `500`.
+  3. **Restarting Services on a VPS:** Note that on VPS setups, the web dashboard often runs as a separate system-wide unit (e.g. `hermes-dashboard.service`) rather than inside the `hermes-gateway.service` user unit. To apply Python auth modifications, always restart the dashboard service:
+     ```bash
+     systemctl restart hermes-dashboard.service
+     ```
+     If you hit the `Provider does not support redirect login` error in your browser, it means the browser is still refreshing the old cached `/auth/login` page; navigate back to the root `/` or `/login` to render the password sign-in form.
+

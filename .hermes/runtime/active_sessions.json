@@ -1,1 +1,1 @@
-{"entries": []}
+{"entries": [{"lease_id": "b1c054df6224492aa7eed0347ef10f15", "metadata": {"live_session_id": "eac295c1"}, "pid": 164375, "process_start_time": 1782795560.42, "session_id": "20260630_050632_c76222", "started_at": 1782795992.2746243, "surface": "tui", "updated_at": 1782795992.2746243}, {"lease_id": "3a92e0d69bbc423987fbc68c49671188", "metadata": {"live_session_id": "8a476285"}, "pid": 164375, "process_start_time": 1782795560.42, "session_id": "20260630_050638_917eb3", "started_at": 1782795998.088693, "surface": "tui", "updated_at": 1782795998.088693}]}
